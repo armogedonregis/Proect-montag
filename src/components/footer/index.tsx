@@ -63,9 +63,9 @@ export const Footer: React.FC = () => {
                         <Item><Button to={'/stati-o-remonte'} theme="footLink">Статьи о ремонте</Button></Item>
                     </List>
                     <div>
-                        <b><Button className="text-white text-lg hover:text-btn-gray border-b border-dashed border-white" theme="phone" to="tel:+74999933445">+7 (499) 993-34-45</Button></b>
+                        <b><Button className="text-white text-lg hover:text-btn-gray hover:border-btn-gray border-b border-dashed border-white" theme="phone" href="tel:+74999933445">+7 (499) 993-34-45</Button></b>
                         <br />
-                        <Button className="text-white text-base hover:text-btn-gray tracking-wider border-white mb-4" theme="call">Заказать звонок</Button>
+                        <Button className="text-white text-base hover:text-btn-gray hover:border-btn-gray tracking-wider border-white mb-4" theme="call">Заказать звонок</Button>
                         <br />
                         <span className="text-white text-base">Ежедневно с <b>9:00</b></span>
                         <br />

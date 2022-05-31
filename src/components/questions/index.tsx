@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { Button } from "../button";
 import { Wrapper } from "../wrapper";
 import Check from "../../assets/icons/check.svg";
-import Engineer from "../../assets/images/happy_engineer.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 
 const Container = styled.section`
@@ -92,13 +92,13 @@ export const Questions: React.FC = () => {
                 <ListContainer>
                     <ListLeft>
                         <List>
-                            <Item><Check /><Descr>Дизайн-проект</Descr></Item>
-                            <Item><Check /><Descr>Согласование и решение всех проблем</Descr></Item>
-                            <Item><Check /><Descr>Комплектация объекта отделочными материалами</Descr></Item>
-                            <Item><Check /><Descr>Черновые работы</Descr></Item>
-                            <Item><Check /><Descr>Инженерные работы</Descr></Item>
-                            <Item><Check /><Descr>Чистовые работы</Descr></Item>
-                            <Item><Check /><Descr>Вывоз мусора и финальная уборка объекта</Descr></Item>
+                            <Item><Check width={30} height={30} /><Descr>Дизайн-проект</Descr></Item>
+                            <Item><Check width={30} height={30} /><Descr>Согласование и решение всех проблем</Descr></Item>
+                            <Item><Check width={30} height={30} /><Descr>Комплектация объекта отделочными материалами</Descr></Item>
+                            <Item><Check width={30} height={30} /><Descr>Черновые работы</Descr></Item>
+                            <Item><Check width={30} height={30} /><Descr>Инженерные работы</Descr></Item>
+                            <Item><Check width={30} height={30} /><Descr>Чистовые работы</Descr></Item>
+                            <Item><Check width={30} height={30} /><Descr>Вывоз мусора и финальная уборка объекта</Descr></Item>
                         </List>
                         <QuestContainer>
                             <Quest>Есть вопрос? Задайте его<br /> руководителю проектов</Quest>
@@ -106,7 +106,13 @@ export const Questions: React.FC = () => {
                         </QuestContainer>
                     </ListLeft>
                     <ListRight>
-                        <img src={Engineer} />
+                        <StaticImage 
+                            placeholder={"blurred"}
+                            src={"../../assets/images/happy_engineer.png"}
+                            alt={""}
+                            quality={100}
+                            formats={["auto", "webp", "avif"]}
+                        />
                     </ListRight>
                 </ListContainer>
             </Wrapper>

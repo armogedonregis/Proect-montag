@@ -27,8 +27,8 @@ export const Header: React.FC = () => {
         <Head>
           <Link to="/"><img src={logo} alt="" /></Link>
           <Mobile>
-            <Button className="mr-6 tracking-wider" theme="phone" to="tel:+74999933445">+7 (499) 993-34-45</Button>
-            <Button className="tracking-wider" theme="call">Заказать звонок</Button>
+            <Button className="mr-6 tracking-wider text-accent" theme="phone" href="tel:+74999933445">+7 (499) 993-34-45</Button>
+            <Button className="tracking-wider border-black" theme="call">Заказать звонок</Button>
             <br />
             <span 
               className="text-base tracking-wider">

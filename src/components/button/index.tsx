@@ -3,10 +3,9 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import tw from "twin.macro";
 
-const ButtonForPhone = styled(Link)`
+const ButtonForPhone = styled.a`
   ${tw`
   text-xl
-  text-accent
   font-bold
   `}
 `;
@@ -16,7 +15,6 @@ const ButtonForCall = styled.button`
   text-base
   border-b
   border-dashed
-  border-black
   `}
 `;
 
@@ -58,7 +56,7 @@ const ButtonForButton = styled(Link)`
 
 const ButtonForPrice = styled(Link)`
   ${tw`
-  
+
 `}
 `;
 
@@ -67,7 +65,10 @@ export const Button: React.FC<{
   className?: string;
   theme?: string;
   to?: string;
-}> = ({ children, className, theme = "phone", to }) => {
+  href?: string;
+  onMouseOver?: any;
+  onMouseOut?: any;
+}> = ({ children, onMouseOver, onMouseOut, className, href, theme = "phone", to }) => {
   if (theme === "call") {
     return <ButtonForCall className={className}>{children}</ButtonForCall>;
   }
@@ -81,7 +82,7 @@ export const Button: React.FC<{
     return <ButtonForButton className={className} to={to}>{children}</ButtonForButton>;
   }
   if (theme === "price") {
-    return <ButtonForPrice className={className} to={to}>{children}</ButtonForPrice>;
+    return <ButtonForPrice onMouseOut={onMouseOut} onMouseOver={onMouseOver} className={className} to={to}>{children}</ButtonForPrice>;
   }
-  return <ButtonForPhone className={className} to={to}>{children}</ButtonForPhone>;
+  return <ButtonForPhone className={className} href={href}>{children}</ButtonForPhone>;
 };
