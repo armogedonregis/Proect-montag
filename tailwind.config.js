@@ -29,6 +29,9 @@ module.exports = {
           gray: "#BDBDBD"
         }
       },
+      boxShadow: {
+        'card': '10px 5px 30px 20px #E0E0E0',
+      },
     },
     screens: {
       sm: "640px",

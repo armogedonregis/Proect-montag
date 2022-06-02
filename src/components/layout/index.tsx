@@ -18,6 +18,7 @@ const PageContainer = styled.div`
     text-primary
     h-full
     items-center
+    overflow-x-hidden
   `}
 `;
 

@@ -12,7 +12,7 @@ ${tw`
     text-center
     mb-10
     bg-bgWhite
-    w-full
+    w-screen
     py-[6rem]
 `};
 `;

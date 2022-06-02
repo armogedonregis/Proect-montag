@@ -9,6 +9,7 @@ import Arrow from "../../assets/icons/arr_right.svg";
 const Container = styled.section`
 ${tw`
     text-center
+    mb-20
 `};
 `;
 
@@ -81,7 +82,7 @@ const [active4, setActive4] = useState(false);
                 <Title>{children}</Title>
                 <List>
                     <Item>
-                        <Button onMouseOut={() => setActive1(!active1)} onMouseOver={() => setActive1(!active1)} theme="price" to={'/'}>
+                        <Button onMouseOut={() => setActive1(false)} onMouseOver={() => setActive1(true)} theme="price" to={'/'}>
                             <StaticImage 
                                 placeholder={"blurred"}
                                 src={"../../assets/images/price_1.jpg"} 
@@ -112,7 +113,7 @@ const [active4, setActive4] = useState(false);
                         </Button>
                     </Item>
                     <Item>
-                        <Button onMouseOut={() => setActive2(!active2)} onMouseOver={() => setActive2(!active2)} theme="price" to={'/'}>
+                        <Button onMouseOut={() => setActive2(false)} onMouseOver={() => setActive2(true)} theme="price" to={'/'}>
                         <StaticImage 
                                 placeholder={"blurred"}
                                 src={"../../assets/images/price_2.jpg"} 
@@ -143,7 +144,7 @@ const [active4, setActive4] = useState(false);
                         </Button>
                     </Item>
                     <Item>
-                        <Button onMouseOut={() => setActive3(!active3)} onMouseOver={() => setActive3(!active3)} theme="price" to={'/'}>
+                        <Button onMouseOut={() => setActive3(false)} onMouseOver={() => setActive3(true)} theme="price" to={'/'}>
                         <StaticImage 
                                 placeholder={"blurred"}
                                 src={"../../assets/images/price_3.jpg"} 
@@ -174,7 +175,7 @@ const [active4, setActive4] = useState(false);
                         </Button>
                     </Item>
                     <Item>
-                        <Button onMouseOut={() => setActive4(!active4)} onMouseOver={() => setActive4(!active4)} theme="price" to={'/'}>
+                        <Button onMouseOut={() => setActive4(false)} onMouseOver={() => setActive4(true)} theme="price" to={'/'}>
                         <StaticImage 
                                 placeholder={"blurred"}
                                 src={"../../assets/images/price_4.jpg"} 

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import Banner from "../../assets/images/banner.jpg"
 import { Button } from "../button";
 import { Wrapper } from "../wrapper";
 import Worker from "../../assets/icons/worker.svg";
@@ -12,7 +11,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Container = styled.div`
 ${tw`
-
+    relative
 `};
 `;
 
@@ -108,14 +107,11 @@ export const Hero: React.FC = () => {
                 placeholder={"blurred"}
                 src={"../../assets/images/banner.jpg"} 
                 alt={""}
-                objectFit={"cover"}
                 style={{
                     width: '100vw',
                     position: 'relative',
                 }}
                 imgStyle={{
-                    width: '100%',
-                    height: '100%',
                 }}
                 quality={100}
                 formats={["auto", "webp", "avif"]}
