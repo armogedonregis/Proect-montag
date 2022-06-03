@@ -6,7 +6,6 @@ import { Wrapper } from "../wrapper";
 
 const Container = styled.section`
   ${tw`
-  mt-32
   mb-20
   mx-auto
   `};
@@ -19,24 +18,27 @@ const Title = styled.h2`
 `;
 
 const TextContainer = styled.div`
-box-shadow: -9px 7px 25px -6px #eaeaea;
 ${tw`
-    absolute
-    p-[60px 70px]
-    bg-white
-    w-[425px]
-    z-20
+    relative
+    text-right
+    mr-10
 `}
 `;
 
 const Descr = styled.p`
+box-shadow: -9px 7px 25px -6px #eaeaea;
   ${tw`
-  w-10/12
+  absolute
+  p-[50px 90px]
+  w-[600px]
+  text-left
+  top-[4.5rem]
+  bg-white
+  z-20
   mx-auto
-  text-justify
   text-xl 
+  leading-[30px]
   font-light
-  leading-8
   `};
 `;
 
@@ -45,22 +47,18 @@ export const DesignProect: React.FC = () => {
         <Wrapper>
             <Container>
                 <Title>Дизайн-проект</Title>
-                <TextContainer>
+                    <TextContainer>
+                        <StaticImage 
+                            placeholder={"blurred"}
+                            src={"../../assets/images/design_proect.jpg"} 
+                            alt={""}
+                            quality={100}
+                            formats={["auto", "webp", "avif"]}
+                        />
                     <Descr>
                         В настоящее время на рынке существует множество компаний, предлагающих свои услуги по современному дизайну интерьера. Компания Проект Монтаж уже более 10 лет занимается разработкой дизайна квартир и загородных домов в Москве и Московской области. Чем мы выгодно выделяемся среди своих конкурентов.
                     </Descr>
-                </TextContainer>
-                    <StaticImage 
-                        placeholder={"blurred"}
-                        src={"../../assets/images/design_proect.jpg"} 
-                        alt={""}
-                        style={{
-                            width: '100%',
-                            position: 'relative',
-                        }}
-                        quality={100}
-                        formats={["auto", "webp", "avif"]}
-                    />
+                    </TextContainer>
             </Container>
         </Wrapper>
     );

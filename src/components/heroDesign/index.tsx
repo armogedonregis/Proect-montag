@@ -8,6 +8,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const Container = styled.div`
 ${tw`
     relative
+    mb-32
 `};
 `;
 
@@ -23,8 +24,9 @@ ${tw`
 
 const Title = styled.h1`
 ${tw`
-    w-4/12
+    w-[35rem]
     text-5xl
+    leading-[66px]
     text-primary
     font-extrabold
     mb-2
@@ -33,7 +35,7 @@ ${tw`
 
 const Descr = styled.p`
 ${tw`
-    w-5/12
+    w-2/5
     italic
     text-primary
     text-2xl

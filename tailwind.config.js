@@ -20,6 +20,7 @@ module.exports = {
         },
         bgWhite: {
           DEFAULT: "#F1F1F1",
+          blue: "#eff6fd",
         },
         footer: {
           DEFAULT: "#55565c",
