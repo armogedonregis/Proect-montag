@@ -28,20 +28,46 @@ ${tw`
 `}
 `;
 
+const ListContainer = styled.div`
+${tw`
+    flex
+    mb-8
+`}
+`;
+
+const TextList = styled.b`
+${tw`
+    text-number
+    mr-[2rem]
+    text-[260px]
+    font-extrabold
+    leading-[180px]
+`}
+`;
+
 const List = styled.ul`
 ${tw`
     flex
-    flex-wrap
-    justify-center
+    items-center
 `}
 `;
 
 const Item = styled.li`
 ${tw`
-    w-1/12
+    w-[200px]
+    flex
+    flex-col
+    items-center
+    m-[15px]
+`}
+`;
+
+const Descr = styled.span`
+${tw`
+    pt-4
     text-xl
+    text-black
     font-light
-    mr-[150px]
 `}
 `;
 
@@ -50,16 +76,24 @@ export const FeaturesDesign: React.FC = () => {
         <Container>
             <Wrapper>
                 <Title>Дизайн-проект в два этапа</Title>
-                <List>
-                    <Item><Measure />Замеры помещения</Item>
-                    <Item><Plan />Планировочное решение</Item>
-                    <Item><Sketch />Эскизы объекта в 3д</Item>
-                    <Item><Bucket />Выбор черновых отделочных материалов</Item>
-                    <Item><Installation />Планы монтажа перегородок, дверных проемов</Item>
-                    <Item><Jack />План сантехники, розеток и выключателей, освещение</Item>
-                    <Item><Roller />Схема пола и потолка, отделка стен</Item>
-                    <Item><Furniture />Выбор финишных отделочных материалов, дверей, мебели, оборудования</Item>
-                </List>
+                <ListContainer>
+                    <TextList>1</TextList>
+                    <List>
+                        <Item><Measure /><Descr>Замеры<br /> помещения</Descr></Item>
+                        <Item><Plan /><Descr>Планировочное решение</Descr></Item>
+                        <Item><Sketch /><Descr>Эскизы объекта<br /> в 3д</Descr></Item>
+                        <Item><Bucket /><Descr>Выбор черновых отделочных материалов</Descr></Item>
+                    </List>
+                </ListContainer>
+                <ListContainer>
+                    <TextList>2</TextList>
+                    <List>
+                        <Item><Installation /><Descr>Планы монтажа перегородок, дверных проемов</Descr></Item>
+                        <Item><Jack /><Descr>План сантехники, розеток и выключателей, освещение</Descr></Item>
+                        <Item><Roller /><Descr>Схема пола и потолка, отделка стен</Descr></Item>
+                        <Item><Furniture /><Descr>Выбор финишных отделочных материалов, дверей, мебели, оборудования</Descr></Item>
+                    </List>
+                </ListContainer>
             </Wrapper>
         </Container>
     );

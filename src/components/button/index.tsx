@@ -24,7 +24,7 @@ const ButtonForNavLink = styled(Link)`
   text-base
   hover:bg-btn
   px-5
-  py-4
+  py-[0.8rem]
   -ml-4
 `}
 `;

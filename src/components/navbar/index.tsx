@@ -10,7 +10,6 @@ ${tw`
     w-full
     h-[50px]
     bg-accent
-    overflow-hidden
     sticky
     top-0
     z-50
@@ -29,6 +28,7 @@ ${tw`
 
 const Item = styled.li`
 ${tw`
+    max-h-full
 `};
 `;
 

@@ -12,6 +12,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const Container = styled.div`
 ${tw`
     relative
+    mb-32
 `};
 `;
 
@@ -19,7 +20,7 @@ const Text = styled.div`
 ${tw`
     block
     absolute
-    top-[16rem]
+    top-[6rem]
     text-white
     tracking-wider
 `}
@@ -56,13 +57,6 @@ ${tw`
 `}
 `;
 
-const Image = styled.img`
-${tw`
-    w-screen
-    relative
-`};
-`;
-
 const Panel = styled.div`
 box-shadow: 0px 5px 7px 0px #eaeaea;
 left:50%;
@@ -70,7 +64,7 @@ transform:translate(-50%);
 ${tw`
     w-[950px]
     absolute
-    -bottom-44
+    -bottom-16
     py-10
     px-10
     rounded-lg
@@ -103,16 +97,12 @@ ${tw`
 export const Hero: React.FC = () => {
     return (
         <Container>
+
             <StaticImage 
                 placeholder={"blurred"}
-                src={"../../assets/images/banner.jpg"} 
+                src={"../../assets/images/bg/banner.jpg"} 
                 alt={""}
-                style={{
-                    width: '100vw',
-                    position: 'relative',
-                }}
-                imgStyle={{
-                }}
+                layout="fullWidth"
                 quality={100}
                 formats={["auto", "webp", "avif"]}
             />

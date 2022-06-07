@@ -7,6 +7,8 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Container = styled.div`
 ${tw`
+    w-screen
+    h-screen
     relative
     mb-32
 `};
@@ -35,7 +37,7 @@ ${tw`
 
 const Descr = styled.p`
 ${tw`
-    w-2/5
+    w-[42rem]
     italic
     text-primary
     text-2xl
@@ -50,13 +52,11 @@ export const HeroDesign: React.FC = () => {
         <Container>
             <StaticImage 
                 placeholder={"blurred"}
-                src={"../../assets/images/banner_design.jpg"} 
+                src={"../../assets/images/bg/banner_design.jpg"} 
                 alt={""}
+                layout="fullWidth"
                 style={{
-                    width: '100vw',
                     position: 'relative',
-                }}
-                imgStyle={{
                 }}
                 quality={100}
                 formats={["auto", "webp", "avif"]}

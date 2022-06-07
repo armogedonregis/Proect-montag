@@ -20,7 +20,8 @@ module.exports = {
         },
         bgWhite: {
           DEFAULT: "#F1F1F1",
-          blue: "#eff6fd",
+          blue: "#EFF6FD",
+          gray: "#F0F2F7"
         },
         footer: {
           DEFAULT: "#55565c",
@@ -28,10 +29,14 @@ module.exports = {
         btn: {
           DEFAULT: "#1E7BDA",
           gray: "#BDBDBD"
+        },
+        number: {
+          DEFAULT: "#DAE8F7",
         }
       },
       boxShadow: {
         'card': '10px 5px 30px 20px #E0E0E0',
+        'cardKinds': '1px 1px 25px 4px #E6E6E6',
       },
     },
     screens: {

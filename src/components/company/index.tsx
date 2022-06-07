@@ -168,7 +168,7 @@ export const Company: React.FC = () => {
                 </CardContainer>
                 <QuestionContainer>
                     <QuestionText>Есть вопрос? Задайте его руководителю проектов</QuestionText>
-                    <Button theme="button">задать вопрос</Button>
+                    <Button theme="button" to="/">задать вопрос</Button>
                 </QuestionContainer>
             </Wrapper>
         </Container>

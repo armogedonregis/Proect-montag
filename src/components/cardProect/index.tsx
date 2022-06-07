@@ -100,7 +100,7 @@ export const CardProect: React.FC = () => {
                             <Item>Рабочие чертежи по сантехнике</Item>
                         </List>
                         <Price>от <b>500</b> руб/м2</Price>
-                        <Btn theme="button">заказать</Btn>
+                        <Btn theme="button" to="/">заказать</Btn>
                     </Card>
                     <Card>
                         <StaticImage 
@@ -124,7 +124,7 @@ export const CardProect: React.FC = () => {
                             <Item>Подбор отделочных материалов и мебели</Item>
                         </List>
                         <Price>от <b>1000</b> руб/м2</Price>
-                        <Btn theme="button">заказать</Btn>
+                        <Btn theme="button" to="/">заказать</Btn>
                     </Card>
                     <Card>
                         <StaticImage 
@@ -150,7 +150,7 @@ export const CardProect: React.FC = () => {
                             <Item>Посещение объекта дизайнером</Item>
                         </List>
                         <Price>от <b>1500</b> руб/м2</Price>
-                        <Btn theme="button">заказать</Btn>
+                        <Btn theme="button" to="/">заказать</Btn>
                     </Card>
                 </CardContainer>
             </Wrapper>

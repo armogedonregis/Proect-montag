@@ -5,7 +5,6 @@ import { Wrapper } from "../wrapper";
 
 const Jobs = styled.section`
   ${tw`
-  mt-32
   mb-20
   mx-auto
   `};
