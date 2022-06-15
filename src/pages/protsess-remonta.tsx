@@ -7,4 +7,4 @@ export default function Remont() {
         Процесс ремонта
       </Layout>
   );
-};
+}

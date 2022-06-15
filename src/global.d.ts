@@ -10,3 +10,6 @@ declare module "*.svg" {
 declare module "*.gif" {
   export default "" as any;
 }
+declare module "*.mdx" {
+  export default "" as any;
+}

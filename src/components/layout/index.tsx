@@ -37,4 +37,4 @@ export default function Layout({
       <Footer />
     </PageContainer>
   );
-};
+}

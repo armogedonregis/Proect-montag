@@ -7,4 +7,4 @@ export default function StatiRemont() {
         Статьи о ремонте
       </Layout>
   );
-};
+}

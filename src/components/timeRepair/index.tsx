@@ -42,16 +42,28 @@ ${tw`
 `}
 `;
 
-export const TimeRepair: React.FC = () => {
+export const TimeRepair: React.FC<{
+    TimeTitle: any;
+    TextMetr1: any;
+    TextMetr2: any;
+    TextMetr3: any;
+    TextMetr4: any;
+    TimeMetr1: any;
+    TimeMetr2: any;
+    TimeMetr3: any;
+    TimeMetr4: any;
+}> = ({TimeTitle, TimeMetr1, TimeMetr2, TimeMetr3, TimeMetr4, 
+    TextMetr1, TextMetr2, TextMetr3, TextMetr4
+}) => {
     return (
         <Container>
             <Wrapper>
-                    <Title>Сроки проведения косметического ремонта</Title>
+                    <Title>{TimeTitle}</Title>
                     <List>
-                        <Item><Metr>до 48 м2</Metr>15-20 дней</Item>
-                        <Item><Metr>до 70 м2</Metr>20-35 дней</Item>
-                        <Item><Metr>до 100 м2</Metr>35-45 дней</Item>
-                        <Item><Metr>до 140 м2</Metr>45-60 дней</Item>
+                        <Item><Metr>{TimeMetr1}</Metr>{TextMetr1}</Item>
+                        <Item><Metr>{TimeMetr2}</Metr>{TextMetr2}</Item>
+                        <Item><Metr>{TimeMetr3}</Metr>{TextMetr3}</Item>
+                        <Item><Metr>{TimeMetr4}</Metr>{TextMetr4}</Item>
                     </List>
             </Wrapper>
         </Container>

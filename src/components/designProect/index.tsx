@@ -42,21 +42,26 @@ box-shadow: -9px 7px 25px -6px #eaeaea;
   `};
 `;
 
-export const DesignProect: React.FC = () => {
+export const DesignProect: React.FC<{
+    TitleDesign: any;
+    DescrDesign: any;
+}> = ({ TitleDesign, DescrDesign }) => {
     return (
         <Wrapper>
             <Container>
-                <Title>Дизайн-проект</Title>
-                    <TextContainer>
-                        <StaticImage 
-                            placeholder={"blurred"}
-                            src={"../../assets/images/design_proect.jpg"} 
-                            alt={""}
-                            quality={100}
-                            formats={["auto", "webp", "avif"]}
-                        />
+                <Title>
+                    {TitleDesign}
+                </Title>
+                <TextContainer>
+                    <StaticImage 
+                        placeholder={"blurred"}
+                        src={"../../assets/images/design_proect.jpg"} 
+                        alt={""}
+                        quality={100}
+                        formats={["auto", "webp", "avif"]}
+                    />
                     <Descr>
-                        В настоящее время на рынке существует множество компаний, предлагающих свои услуги по современному дизайну интерьера. Компания Проект Монтаж уже более 10 лет занимается разработкой дизайна квартир и загородных домов в Москве и Московской области. Чем мы выгодно выделяемся среди своих конкурентов.
+                        {DescrDesign}
                     </Descr>
                     </TextContainer>
             </Container>

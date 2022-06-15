@@ -10,7 +10,7 @@ const Container = styled.section`
 ${tw`
     text-center
     mb-20
-`};
+`}
 `;
 
 const Title = styled.h2`

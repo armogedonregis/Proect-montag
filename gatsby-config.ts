@@ -14,30 +14,51 @@ const config: GatsbyConfig = {
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "./src/assets/favicon.png"
+      icon: `${__dirname}/src/assets/favicon.png`,
+      lang: 'ru',
+      start_url: '/',
     },
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "assets",
-      "path": "./src/assets/"
-    },
- 
-  }, "gatsby-plugin-postcss", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
+    }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: "assets",
+        path: `${__dirname}/src/assets/`,
+      },
+  
+    }, "gatsby-plugin-postcss", {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: "pages",
+        path: `${__dirname}/src/pages/`,
+      },
 
-  }, {
-    resolve: "gatsby-plugin-react-svg",
-    options: {
-      rule: {
-        include: /icons/
-      }
+    }, "gatsby-plugin-mdx", {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: "data",
+        path: `${__dirname}/src/data/`,
+      },
+
+    }, "gatsby-transformer-json", {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    }, {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/
+        },
+      },
+    }, {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: 'blue',
+        showSpinner: false,
+      },
     },
-  }]
+  ],
 };
 
 export default config;

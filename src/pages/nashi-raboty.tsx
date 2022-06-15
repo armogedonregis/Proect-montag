@@ -7,4 +7,4 @@ export default function Work() {
         Наши работы
       </Layout>
   );
-};
+}

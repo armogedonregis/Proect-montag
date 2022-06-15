@@ -12,4 +12,4 @@ export default function Remont() {
       </section>
     </Layout>
   );
-};
+}

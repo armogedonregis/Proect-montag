@@ -103,13 +103,16 @@ ${tw`
 `;
 
 
-export const HeroKinds: React.FC = () => {
+export const HeroKinds: React.FC<{
+    title: any;
+    price: any;
+}> = ({title, price }) => {
     return (
         <Container>
             <Wrapper>
-                <Title>Косметический ремонт квартир</Title>
+                <Title>{title}</Title>
                 <NavBtn>
-                    <PriceTitle>от <Price>3000</Price> руб/м2</PriceTitle>
+                    <PriceTitle>от <Price>{price}</Price> руб/м2</PriceTitle>
                     <Button theme="button" to="/">рассчитать стоимость</Button>
                 </NavBtn>
                 <CardContainer>

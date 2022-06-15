@@ -29,6 +29,12 @@ const ButtonForNavLink = styled(Link)`
 `}
 `;
 
+const ButtonForBurger = styled(Link)`
+${tw`
+  text-sm
+`}
+`;
+
 const ButtonForFootLink = styled(Link)`
   ${tw`
   text-white
@@ -71,6 +77,9 @@ export const Button: React.FC<{
 }> = ({ children, onMouseOver, onMouseOut, className, href, theme = "phone", to }) => {
   if (theme === "call") {
     return <ButtonForCall className={className}>{children}</ButtonForCall>;
+  }
+  if (theme === "burger") {
+    return <ButtonForBurger className={className} to={to}>{children}</ButtonForBurger>;
   }
   if (theme === "navLink") {
     return <ButtonForNavLink className={className} to={to}>{children}</ButtonForNavLink>;
