@@ -14,9 +14,7 @@ const PageContainer = styled.div`
   ${tw`
     flex
     flex-col
-    w-full
     text-primary
-    h-full
     items-center
     overflow-x-hidden
   `}

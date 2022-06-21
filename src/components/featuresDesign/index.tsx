@@ -48,7 +48,7 @@ ${tw`
 const List = styled.ul`
 ${tw`
     flex
-    items-center
+    items-start
 `}
 `;
 

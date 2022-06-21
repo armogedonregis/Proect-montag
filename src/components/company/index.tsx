@@ -9,7 +9,7 @@ const Container = styled.section`
   ${tw`
   w-screen
   bg-bgWhite
-  p-[50px 0 30px]
+  p-[70px 0 30px]
   `};
 `;
 
@@ -109,7 +109,7 @@ brigadeText && tw`m-[2px 0 16px 80px]`
 const QuestionContainer = styled.div`
 ${tw`
     flex
-    justify-evenly
+    justify-center
     py-[50px]
 `}
 `;
@@ -168,7 +168,7 @@ export const Company: React.FC = () => {
                 </CardContainer>
                 <QuestionContainer>
                     <QuestionText>Есть вопрос? Задайте его руководителю проектов</QuestionText>
-                    <Button theme="button" to="/">задать вопрос</Button>
+                    <Button className="px-[100px]" theme="button" to="/">задать вопрос</Button>
                 </QuestionContainer>
             </Wrapper>
         </Container>

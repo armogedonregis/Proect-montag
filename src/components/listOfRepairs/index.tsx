@@ -28,7 +28,7 @@ ${tw`
 
 const TextContainer = styled.div`
 ${tw`
-    
+    w-[20.5rem]
 `}
 `;
 

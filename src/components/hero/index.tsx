@@ -12,48 +12,81 @@ import { StaticImage } from "gatsby-plugin-image";
 const Container = styled.div`
 ${tw`
     relative
-    mb-32
+    mb-5
+    lg:mb-32
 `};
+`;
+
+const ImageContainer = styled.div`
+${tw`
+    w-[150vw]
+    lg:w-full
+`}
 `;
 
 const Text = styled.div`
 ${tw`
     block
     absolute
-    top-[6rem]
+    top-[1rem]
+    lg:top-[6rem]
     text-white
+    leading-[25px]
+    lg:leading-[50px]
     tracking-wider
 `}
 `;
 
 const Design = styled.span`
 ${tw`
-    text-2xl
+    text-base
+    lg:text-2xl
     mb-2
 `}
 `;
 
 const Title = styled.h1`
 ${tw`
-    text-6xl
+    text-xl
+    lg:text-6xl
     font-extrabold
+    w-[250px]
+    lg:w-full
     mb-2
 `};
 `;
 
-const Key = styled.span`
+const Key = styled.p`
 ${tw`
-    text-2xl
+    text-base
+    mb-7
+    lg:mb-14
+    lg:text-2xl
 `}
 `;
 
-const Price = styled.span`
+const PriceContainer = styled.div`
 ${tw`
     flex
+    justify-between
+    lg:block
+    lg:w-full
+    w-screen
+    pr-7
+    lg:pr-0
+`}
+`;
+
+const Price = styled.p`
+${tw`
     italic
-    text-2xl
-    mt-14
-    mb-14
+    tracking-[0]
+    lg:tracking-wider
+    w-[150px]
+    lg:w-full
+    text-xs
+    lg:text-2xl
+    lg:mb-14
 `}
 `;
 
@@ -69,6 +102,8 @@ ${tw`
     px-10
     rounded-lg
     bg-white
+    display[none]
+    lg:display[block]
 `}
 `;
 
@@ -97,22 +132,25 @@ ${tw`
 export const Hero: React.FC = () => {
     return (
         <Container>
-
-            <StaticImage 
-                placeholder={"blurred"}
-                src={"../../assets/images/bg/banner.jpg"} 
-                alt={""}
-                layout="fullWidth"
-                quality={100}
-                formats={["auto", "webp", "avif"]}
-            />
+            <ImageContainer>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/bg/banner.jpg"} 
+                    alt={""}
+                    layout="fullWidth"
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImageContainer>
             <Wrapper>
                 <Text>
                     <Design>Дизайнерский</Design>
                     <Title>Ремонт квартир в Москве и области</Title>
                     <Key>«под ключ»</Key>
-                    <Price>Рассчитай стоимость ремонта прямо сейчас</Price>
-                    <Button to={'/'} theme="button">рассчитать стоимость</Button>
+                    <PriceContainer>
+                        <Price>Рассчитай стоимость ремонта прямо сейчас</Price>
+                        <Button to={'/'} theme="button">рассчитать стоимость</Button>
+                    </PriceContainer>
                 </Text>
                 <Panel>
                     <Block>

@@ -6,14 +6,15 @@ import { Wrapper } from "../wrapper";
 
 const Container = styled.section`
   ${tw`
-  mb-20
+  mb-32
   mx-auto
   `};
 `;
 
 const Title = styled.h2`
   ${tw`
-  text-center font-extrabold text-4xl mb-10
+  text-center font-extrabold text-[40px] mb-10
+  px-5
   `};
 `;
 
@@ -30,9 +31,9 @@ box-shadow: -9px 7px 25px -6px #eaeaea;
   ${tw`
   absolute
   p-[50px 90px]
-  w-[600px]
+  w-[700px]
   text-left
-  top-[4.5rem]
+  top-[2rem]
   bg-white
   z-20
   mx-auto
@@ -63,7 +64,7 @@ export const DesignProect: React.FC<{
                     <Descr>
                         {DescrDesign}
                     </Descr>
-                    </TextContainer>
+                </TextContainer>
             </Container>
         </Wrapper>
     );

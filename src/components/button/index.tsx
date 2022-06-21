@@ -21,10 +21,15 @@ const ButtonForCall = styled.button`
 const ButtonForNavLink = styled(Link)`
   ${tw`
   text-white
-  text-base
+  md:text-xs
+  lg:text-sm
+  xl:text-base
   hover:bg-btn
-  px-5
-  py-[0.8rem]
+  md:px-1
+  lg:px-4
+  xl:px-5
+  md:py-[1rem]
+  lg:py-[0.9rem]
   -ml-4
 `}
 `;
@@ -32,6 +37,7 @@ const ButtonForNavLink = styled(Link)`
 const ButtonForBurger = styled(Link)`
 ${tw`
   text-sm
+  hover:text-accent
 `}
 `;
 
@@ -47,9 +53,16 @@ const ButtonForFootLink = styled(Link)`
 const ButtonForButton = styled(Link)`
   ${tw`
   text-white
-  text-lg
-  font-bold
-  p-[23px 45px]
+  text-center
+  text-[11px]
+  lg:text-lg
+  lg:font-bold
+  font-medium
+  lg:p-[23px 45px]
+  p-[8px 15px]
+  w-[133px]
+  lg:w-full
+  leading-[16px]
   bg-tertiary
   uppercase
   border
@@ -62,12 +75,12 @@ const ButtonForButton = styled(Link)`
 
 const ButtonForPrice = styled(Link)`
   ${tw`
-
+  
 `}
 `;
 
 export const Button: React.FC<{
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   theme?: string;
   to?: string;

@@ -10,6 +10,7 @@ const Container = styled.section`
 ${tw`
     text-center
     mb-20
+    py-[50px]
 `}
 `;
 
@@ -31,7 +32,6 @@ ${tw`
 
 const Item = styled.li`
 box-shadow: 0px 7px 30px 0px #e4e4e4;
-border-radius: 0 0 5px 5px;
 ${tw`
     my-4
     w-[37.5rem]
@@ -56,20 +56,22 @@ ${tw`
 `;
 
 const Content = styled.div<{ hover?: boolean }>`
+border-radius: 0 0 5px 5px;
 ${tw`
     flex 
     items-center
     h-[85px]
 `}
 ${({ hover }) => 
-hover ? tw`bg-accent justify-center` : tw`bg-white justify-around`
+hover ? tw`bg-accent justify-center` : tw`bg-white justify-between px-10`
 }
 `;
 
 
 export const Prices: React.FC<{
 children?: React.ReactChild;
-}> = ({children}) => {
+bg?: any;
+}> = ({children, bg}) => {
     
 const [active1, setActive1] = useState(false);
 const [active2, setActive2] = useState(false);
@@ -77,7 +79,7 @@ const [active3, setActive3] = useState(false);
 const [active4, setActive4] = useState(false);
 
     return (
-        <Container>
+        <Container className={bg}>
             <Wrapper>
                 <Title>{children}</Title>
                 <List>
@@ -132,8 +134,8 @@ const [active4, setActive4] = useState(false);
                             />
                             {!active2 ?
                             <Content>
-                                <ItemTitle>Косметический ремонт</ItemTitle>
-                                <Descr>от <b>3 000</b> руб/м2</Descr>
+                                <ItemTitle>Капитальный ремонт</ItemTitle>
+                                <Descr>от <b>7 000</b> руб/м2</Descr>
                             </Content>
                             :
                             <Content hover>
@@ -163,8 +165,8 @@ const [active4, setActive4] = useState(false);
                             />
                             {!active3 ?
                             <Content>
-                                <ItemTitle>Косметический ремонт</ItemTitle>
-                                <Descr>от <b>3 000</b> руб/м2</Descr>
+                                <ItemTitle>Евроремонт</ItemTitle>
+                                <Descr>от <b>8 000</b> руб/м2</Descr>
                             </Content>
                             :
                             <Content hover>
@@ -194,8 +196,8 @@ const [active4, setActive4] = useState(false);
                             />
                             {!active4 ?
                             <Content>
-                                <ItemTitle>Косметический ремонт</ItemTitle>
-                                <Descr>от <b>3 000</b> руб/м2</Descr>
+                                <ItemTitle>Элитный ремонт</ItemTitle>
+                                <Descr>от <b>12 000</b> руб/м2</Descr>
                             </Content>
                             :
                             <Content hover>

@@ -13,7 +13,6 @@ export default function Index() {
         <Hero />
         <Job />
         <Questions />
-        <Slider />
         <Prices children={"Цены"} />
         <Company />
     </Layout>

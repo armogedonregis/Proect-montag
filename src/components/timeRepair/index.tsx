@@ -7,13 +7,13 @@ const Container = styled.section`
   ${tw`
   mb-20
   bg-bgWhite-gray
-  p-[10px 0 30px]
+  py-[30px]
   `};
 `;
 
 const Title = styled.h2`
   ${tw`
-  text-center font-extrabold text-4xl mb-10
+  text-center font-extrabold text-[40px] mb-10
   `};
 `;
 

@@ -3,10 +3,10 @@ import tw from "twin.macro";
 
 export const Wrapper = styled.div`
   ${tw`
-  m-auto  
-  w-full
-  h-full
+  m-auto
+  max-w-screen-md
+  w-screen
   px-4
-  max-w-screen-xl
+  lg:max-w-screen-xl
   `}
 `;

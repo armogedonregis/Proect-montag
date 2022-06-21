@@ -7,8 +7,8 @@ import Layout from '../../components/layout';
 import { ListOfRepairs } from '../../components/listOfRepairs';
 import { TimeRepair } from '../../components/timeRepair';
 
-export default function Cosmetic({ data }) {
-  const propsText = data.cosmeticJson;
+export default function Elite({ data }) {
+  const propsText = data.eliteJson;
   const itemsProps = propsText.items;
 
 
@@ -32,9 +32,9 @@ export default function Cosmetic({ data }) {
   );
 };
 
-export const cosmetic = graphql`
-  query CosmeticPage {
-    cosmeticJson {
+export const elite = graphql`
+  query ElitePage {
+    eliteJson {
     DescrDesign
     TextMetr1
     TextMetr2

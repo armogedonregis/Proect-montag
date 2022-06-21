@@ -12,18 +12,22 @@ const Jobs = styled.section`
 
 const Title = styled.h2`
   ${tw`
-  text-center font-extrabold text-4xl mb-10
+  lg:text-center font-extrabold lg:text-4xl lg:mb-10
+  text-xl text-left mb-3.5
   `};
 `;
 
 const Descr = styled.p`
   ${tw`
-  w-10/12
+  lg:w-10/12
+  w-full
   mx-auto
-  text-justify
-  text-xl 
+  lg:text-justify
+  lg:text-xl 
+  text-sm
   font-light
-  leading-8
+  lg:leading-8
+  leading-[22px]
   `};
 `;
 
