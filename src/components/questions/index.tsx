@@ -10,16 +10,19 @@ import { StaticImage } from "gatsby-plugin-image";
 const Container = styled.section`
 ${tw`
     text-center
-    mb-10
+    mb-2
+    lg:mb-10
     bg-bgWhite
-    w-screen
-    py-[6rem]
+    lg:w-screen
+    py-[2rem]
+    lg:py-[6rem]
 `};
 `;
 
 const Title = styled.h2`
 ${tw`
-    text-[40px]
+    text-xl
+    lg:text-[40px]
     font-extrabold
     mb-10
 `}
@@ -42,7 +45,8 @@ ${tw`
 
 const ListRight = styled.div`
 ${tw`
-    
+    display[none]
+    lg:block
 `}
 `;
 
@@ -56,7 +60,8 @@ ${tw`
     flex
     items-center
     text-left
-    text-xl
+    text-sm
+    lg:text-xl
     font-light
     mb-3
 `}
@@ -70,14 +75,15 @@ ${tw`
 
 const QuestContainer = styled.div`
 ${tw`
-    flex flex-col items-start
+    flex flex-col items-center lg:items-start
     mt-12
 `}
 `;
 
 const Quest = styled.i`
 ${tw`
-    text-2xl
+    text-sm
+    lg:text-2xl
     text-left
     mb-6
 `}
@@ -102,7 +108,7 @@ export const Questions: React.FC = () => {
                         </List>
                         <QuestContainer>
                             <Quest>Есть вопрос? Задайте его<br /> руководителю проектов</Quest>
-                            <Button className="w-[360px]" to={'/'} theme="button">задать вопрос</Button>
+                            <Button className="lg:w-[360px]" to={'/'} theme="button">задать вопрос</Button>
                         </QuestContainer>
                     </ListLeft>
                     <ListRight>

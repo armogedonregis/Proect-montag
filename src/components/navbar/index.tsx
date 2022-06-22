@@ -25,7 +25,6 @@ ${tw`
     flex
     items-center
     justify-between
-    
 `};
 `;
 

@@ -10,7 +10,7 @@ export default function Design() {
   return (
       <Layout>
         <HeroDesign />
-        <DesignProect />
+        <DesignProect TitleDesign={undefined} DescrDesign={undefined} />
         <Privilege />
         <FeaturesDesign />
         <CardProect />
