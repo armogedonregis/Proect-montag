@@ -5,6 +5,7 @@ import { Button } from "../button";
 import { Wrapper } from "../wrapper";
 import { StaticImage } from "gatsby-plugin-image";
 import Arrow from "../../assets/icons/arr_right.svg";
+import ArrowRight from "../../assets/icons/arr_right_blue.svg";
 
 const Container = styled.section`
 ${tw`
@@ -29,7 +30,8 @@ ${tw`
 const List = styled.ul`
 ${tw`
     flex 
-    justify-between 
+    xl:justify-between 
+    md:justify-center
     flex-wrap
 `}
 `;
@@ -44,10 +46,11 @@ ${tw`
 
 const ItemTitle = styled.b<{ hoverText?: boolean }>`
 ${tw`
-    font-black lg:text-xl text-base
+    font-black lg:text-xl text-base mb-1
+    lg:mb-0
 `}
 ${({ hoverText }) => 
-hoverText ? tw`text-white mr-5 uppercase font-bold tracking-wider` 
+hoverText ? tw`text-white mt-2 mr-5 uppercase font-bold tracking-wider` 
 : 
 tw`text-accent`
 }
@@ -57,6 +60,8 @@ const Descr = styled.span`
 ${tw`
     text-xs
     lg:text-xl
+    lg:mb-0
+    mb-3
 `}
 `;
 
@@ -67,11 +72,27 @@ ${tw`
     flex-col lg:flex-row
     lg:items-center
     items-start
-    h-[85px]
+    lg:h-[85px]
+    h-[110px]
 `}
 ${({ hover }) => 
-hover ? tw`bg-accent justify-center` : tw`bg-white justify-evenly lg:justify-between px-10`
+hover ? tw`bg-accent items-center justify-center` : tw`bg-white justify-evenly lg:justify-between lg:px-10 pl-[15px]`
 }
+`;
+
+const Touch = styled.span`
+
+${tw`
+    lg:display[none]
+    uppercase
+    tracking-wider
+    flex
+    items-center
+    text-accent
+    text-sm
+    font-bold
+    svg:ml-4
+`}
 `;
 
 
@@ -107,6 +128,7 @@ const [active4, setActive4] = useState(false);
                             <Content>
                                 <ItemTitle>Косметический ремонт</ItemTitle>
                                 <Descr>от <b>3 000</b> руб/м2</Descr>
+                                <Touch>уточнить цену<ArrowRight width={32} height={10} /></Touch>
                             </Content>
                             :
                             <Content hover>
@@ -133,6 +155,7 @@ const [active4, setActive4] = useState(false);
                             <Content>
                                 <ItemTitle>Капитальный ремонт</ItemTitle>
                                 <Descr>от <b>7 000</b> руб/м2</Descr>
+                                <Touch>уточнить цену<ArrowRight width={32} height={10} /></Touch>
                             </Content>
                             :
                             <Content hover>
@@ -159,6 +182,7 @@ const [active4, setActive4] = useState(false);
                             <Content>
                                 <ItemTitle>Евроремонт</ItemTitle>
                                 <Descr>от <b>8 000</b> руб/м2</Descr>
+                                <Touch>уточнить цену<ArrowRight width={32} height={10} /></Touch>
                             </Content>
                             :
                             <Content hover>
@@ -185,6 +209,7 @@ const [active4, setActive4] = useState(false);
                             <Content>
                                 <ItemTitle>Элитный ремонт</ItemTitle>
                                 <Descr>от <b>12 000</b> руб/м2</Descr>
+                                <Touch>уточнить цену<ArrowRight width={32} height={10} /></Touch>
                             </Content>
                             :
                             <Content hover>

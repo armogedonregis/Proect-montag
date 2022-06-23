@@ -6,39 +6,47 @@ import { Wrapper } from "../wrapper";
 
 const Container = styled.section`
   ${tw`
-  mb-32
+  lg:mb-32
+  mb-10
   mx-auto
   `};
 `;
 
 const Title = styled.h2`
   ${tw`
-  text-center font-extrabold text-[40px] mb-10
-  px-5
+  text-left font-extrabold lg:text-[40px] lg:mb-10
+  mb-5
+  text-xl
+  lg:text-center
+  lg:px-5
   `};
 `;
 
 const TextContainer = styled.div`
 ${tw`
-    relative
-    text-right
-    mr-10
+    lg:relative
+    lg:text-right
+    lg:mr-10
 `}
 `;
 
 const Descr = styled.p`
 box-shadow: -9px 7px 25px -6px #eaeaea;
   ${tw`
-  absolute
-  p-[50px 90px]
-  w-[700px]
+  lg:absolute
+  lg:p-[50px 90px]
+  lg:w-[700px]
+  w-auto
+  p-[15px]
   text-left
-  top-[2rem]
+  lg:top-[2rem]
   bg-white
   z-20
   mx-auto
-  text-xl 
-  leading-[30px]
+  lg:text-xl 
+  text-xs
+  lg:leading-[30px]
+  leading-[18px]
   font-light
   `};
 `;

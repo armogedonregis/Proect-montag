@@ -7,18 +7,27 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Container = styled.div`
 ${tw`
-    w-screen
-    h-screen
     relative
-    mb-32
+    lg:mb-32
+    mb-5
 `};
+`;
+
+const ImageContainer = styled.div`
+${tw`
+    w-[150vw]
+    lg:w-full
+`}
 `;
 
 const Text = styled.div`
 ${tw`
     block
     absolute
-    top-[6rem]
+    top-[1rem]
+    md:top-[3rem]
+    lg:top-[2rem]
+    xl:top-[6rem]
     text-white
     tracking-wider
 `}
@@ -26,23 +35,35 @@ ${tw`
 
 const Title = styled.h1`
 ${tw`
-    w-[35rem]
-    text-5xl
-    leading-[66px]
+    lg:w-[35rem]
+    lg:leading-[66px]
+    md:leading-[20px]
     text-primary
     font-extrabold
     mb-2
+    md:text-2xl
+    lg:text-4xl
+    xl:text-5xl
+    w-[250px]
+    md:w-full
 `};
 `;
 
 const Descr = styled.p`
 ${tw`
-    w-[42rem]
+    lg:w-[42rem]
+    md:w-[25rem]
+    w-[15rem]
     italic
     text-primary
-    text-2xl
-    mt-14
-    mb-14
+    text-xs
+    mb-5
+    md:mt-6
+    md:mb-10
+    xl:text-2xl
+    lg:text-xl
+    lg:mt-14
+    lg:mb-14
 `}
 `;
 
@@ -50,17 +71,16 @@ ${tw`
 export const HeroDesign: React.FC = () => {
     return (
         <Container>
-            <StaticImage 
-                placeholder={"blurred"}
-                src={"../../assets/images/bg/banner_design.jpg"} 
-                alt={""}
-                layout="fullWidth"
-                style={{
-                    position: 'relative',
-                }}
-                quality={100}
-                formats={["auto", "webp", "avif"]}
-            />
+            <ImageContainer>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/bg/banner_design.jpg"} 
+                    alt={""}
+                    layout="fullWidth"
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImageContainer>
             <Wrapper>
                 <Text>
                     <Title>Дизайн интерьера от Проект Монтаж</Title>

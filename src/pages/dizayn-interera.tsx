@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import React from 'react';
 import { CardProect } from '../components/cardProect';
 import { DesignProect } from '../components/designProect';
@@ -6,14 +7,29 @@ import { HeroDesign } from '../components/heroDesign';
 import Layout from '../components/layout';
 import { Privilege } from '../components/privilege';
 
-export default function Design() {
+export default function Design({ data }) {
+
+  const propsText = data.designIntereraJson;
+  const { TitleDesign, DescrDesign } = propsText;
+    
+  const DesignProps = { TitleDesign, DescrDesign };
+
   return (
       <Layout>
         <HeroDesign />
-        <DesignProect TitleDesign={undefined} DescrDesign={undefined} />
+        <DesignProect {...DesignProps} />
         <Privilege />
         <FeaturesDesign />
         <CardProect />
       </Layout>
   );
 }
+
+export const Interera = graphql`
+  query DesignPage {
+    designIntereraJson {
+    TitleDesign
+    DescrDesign
+  }
+  }
+`

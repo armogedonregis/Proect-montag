@@ -29,7 +29,9 @@ ${tw`
     block
     absolute
     top-[1rem]
-    lg:top-[6rem]
+    md:top-[3rem]
+    lg:top-[2rem]
+    xl:top-[6rem]
     text-white
     leading-[25px]
     lg:leading-[50px]
@@ -40,7 +42,8 @@ ${tw`
 const Design = styled.span`
 ${tw`
     text-base
-    lg:text-2xl
+    lg:text-xl
+    xl:text-2xl
     mb-2
 `}
 `;
@@ -48,10 +51,12 @@ ${tw`
 const Title = styled.h1`
 ${tw`
     text-xl
-    lg:text-6xl
+    md:text-2xl
+    lg:text-4xl
+    xl:text-6xl
     font-extrabold
     w-[250px]
-    lg:w-full
+    md:w-full
     mb-2
 `};
 `;
@@ -60,8 +65,10 @@ const Key = styled.p`
 ${tw`
     text-base
     mb-7
-    lg:mb-14
-    lg:text-2xl
+    lg:mb-10
+    xl:mb-14
+    lg:text-xl
+    xl:text-2xl
 `}
 `;
 
@@ -69,6 +76,7 @@ const PriceContainer = styled.div`
 ${tw`
     flex
     justify-between
+    md:block
     lg:block
     lg:w-full
     w-screen
@@ -83,10 +91,13 @@ ${tw`
     tracking-[0]
     lg:tracking-wider
     w-[150px]
-    lg:w-full
+    md:w-full
     text-xs
-    lg:text-2xl
-    lg:mb-14
+    xl:text-2xl
+    lg:text-xl
+    lg:mb-10
+    xl:mb-14
+    md:mb-7
 `}
 `;
 
@@ -95,15 +106,36 @@ box-shadow: 0px 5px 7px 0px #eaeaea;
 left:50%;
 transform:translate(-50%);
 ${tw`
-    w-[950px]
+    xl:w-[950px]
+    lg:w-[800px]
     absolute
     -bottom-16
-    py-10
-    px-10
+    lg:py-5
+    xl:py-10
+    xl:px-10
+    lg:px-5
     rounded-lg
     bg-white
     display[none]
     lg:display[block]
+`}
+`;
+
+const PanelMd = styled.div`
+box-shadow: 0px 5px 7px 0px #eaeaea;
+left:50%;
+transform:translate(-50%);
+${tw`
+    w-[550px]
+    absolute
+    bottom-10
+    py-3
+    px-2
+    rounded-lg
+    bg-white
+    display[none]
+    lg:display[none]
+    md:display[block]
 `}
 `;
 
@@ -123,8 +155,10 @@ ${tw`
 
 const TextItem = styled.span`
 ${tw`
-    ml-4
-    text-base
+    lg:ml-4
+    md:ml-2
+    lg:text-base
+    text-xs
     text-left
 `}
 `;
@@ -149,7 +183,7 @@ export const Hero: React.FC = () => {
                     <Key>«под ключ»</Key>
                     <PriceContainer>
                         <Price>Рассчитай стоимость ремонта прямо сейчас</Price>
-                        <Button to={'/'} theme="button">рассчитать стоимость</Button>
+                        <Button className="w-[133px]" to={'/'} theme="button">рассчитать стоимость</Button>
                     </PriceContainer>
                 </Text>
                 <Panel>
@@ -172,6 +206,26 @@ export const Hero: React.FC = () => {
                         </Item>
                     </Block>
                 </Panel>
+                <PanelMd>
+                    <Block>
+                        <Item>
+                            <Worker fill={'#F6B300'} width={30} height={30} />
+                            <TextItem>Персональный<br />прораб</TextItem>
+                        </Item>
+                        <Item>
+                            <Document width={30} height={30} />
+                            <TextItem>Работа по договору</TextItem>
+                        </Item>
+                        <Item>
+                            <Piggy fill={'#F6B300'} width={30} height={30} />
+                            <TextItem>Оплата по факту</TextItem>
+                        </Item>
+                        <Item>
+                            <Shield fill={'#F6B300'} width={30} height={30} />
+                            <TextItem>Гарантия<br />5 лет</TextItem>
+                        </Item>
+                    </Block>
+                </PanelMd>
             </Wrapper>
         </Container>
     );

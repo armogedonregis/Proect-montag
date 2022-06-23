@@ -7,15 +7,16 @@ import Refresh from "../../assets/icons/refresh.svg";
 
 const Container = styled.section`
   ${tw`
-  w-screen
-  bg-bgWhite
+  lg:w-screen
+  lg:bg-bgWhite
   p-[70px 0 30px]
   `};
 `;
 
 const Title = styled.h2`
   ${tw`
-  text-center font-extrabold text-4xl mb-10
+  lg:text-center font-extrabold lg:text-4xl lg:mb-10
+  text-xl mb-3 text-left
   `};
 `;
 
@@ -23,13 +24,14 @@ const Descr = styled.h3`
   ${tw`
   text-center
   font-normal
-  text-2xl
+  lg:text-2xl
+  text-sm
   `};
 `;
 
 const CardContainer = styled.div<{ master?: boolean }>`
 ${({ master }) => 
-master ? tw`pl-[80px] mt-[30px]` : tw`flex justify-between mt-[50px]`
+master ? tw`pl-[80px] mt-[30px]` : tw`flex lg:justify-between mt-[25px] lg:mt-[50px]`
 }
 `;
 

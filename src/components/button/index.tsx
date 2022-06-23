@@ -28,8 +28,8 @@ const ButtonForNavLink = styled(Link)`
   md:px-1
   lg:px-4
   xl:px-5
-  md:py-[1rem]
-  lg:py-[0.9rem]
+  md:py-[0.9rem]
+  lg:py-[0.8rem]
   -ml-4
 `}
 `;
@@ -55,13 +55,13 @@ const ButtonForButton = styled(Link)`
   text-white
   text-center
   text-[11px]
-  lg:text-lg
+  xl:text-lg
+  lg:text-base
   lg:font-bold
   font-medium
-  lg:p-[23px 45px]
+  xl:p-[23px 45px]
+  lg:p-[17px 39px]
   p-[8px 15px]
-  w-[133px]
-  lg:w-full
   leading-[16px]
   bg-tertiary
   uppercase
