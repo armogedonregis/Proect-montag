@@ -18,6 +18,7 @@ const Title = styled.h2`
   mb-5
   text-xl
   lg:text-center
+  lg:leading-[50px]
   lg:px-5
   `};
 `;
@@ -51,10 +52,32 @@ box-shadow: -9px 7px 25px -6px #eaeaea;
   `};
 `;
 
+export const BgDesign: React.FC<{
+    theme?: string;
+  }> = ({ theme = "bgcap" }) => {
+    if (theme === "bgdesign") {
+    return <StaticImage 
+        placeholder={"blurred"}
+        src={"../../assets/images/design_proect.jpg"} 
+        alt={""}
+        quality={100}
+        formats={["auto", "webp", "avif"]}
+        />;
+    }
+    return <StaticImage 
+        placeholder={"blurred"}
+        src={"../../assets/images/kapremont_img.jpg"} 
+        alt={""}
+        quality={100}
+        formats={["auto", "webp", "avif"]}
+    />;
+  };
+
 export const DesignProect: React.FC<{
     TitleDesign: any;
     DescrDesign: any;
-}> = ({ TitleDesign, DescrDesign }) => {
+    photo?: any;
+}> = ({ TitleDesign, DescrDesign, photo }) => {
     return (
         <Wrapper>
             <Container>
@@ -62,13 +85,7 @@ export const DesignProect: React.FC<{
                     {TitleDesign}
                 </Title>
                 <TextContainer>
-                    <StaticImage 
-                        placeholder={"blurred"}
-                        src={"../../assets/images/design_proect.jpg"} 
-                        alt={""}
-                        quality={100}
-                        formats={["auto", "webp", "avif"]}
-                    />
+                    <BgDesign theme={photo} />
                     <Descr>
                         {DescrDesign}
                     </Descr>

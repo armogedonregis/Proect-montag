@@ -15,7 +15,8 @@ const Container = styled.section`
 
 const Title = styled.h2`
   ${tw`
-  text-center font-extrabold text-4xl mb-10
+  text-center font-extrabold lg:text-4xl lg:mb-10
+    text-xl mb-5
   `};
 `;
 
@@ -32,10 +33,9 @@ border-radius: 5px;
   ${tw`
   flex
   flex-col
-  justify-between
   w-[22.5rem]
+  mb-10
   bg-white
-  pb-[15rem]
   `};
 `;
 
@@ -57,13 +57,42 @@ ${tw`
 
 const Item = styled.li`
 ${tw`
-    mb-[2px]
+    mb-2
+    list-disc
+    marker:text-accent
 `}
+`;
+
+const FlexContainer = styled.div`
+${tw`
+    flex flex-col justify-between
+`}
+`;
+
+const PriceContainer = styled.div<{ 
+    margin?: boolean; 
+    margin1?: boolean;
+    }>`
+${tw` 
+    flex
+    flex-col
+    lg:mt-5
+    mt-2
+`}
+${({ margin }) => 
+margin && tw`lg:mt-[196px]`
+}
+${({ margin1 }) => 
+margin1 && tw`lg:mt-[108px]`
+}
 `;
 
 const Price = styled.span`
 ${tw`
+    text-xl
     block
+    ml-5
+    mb-4
 `}
 `;
 
@@ -74,11 +103,11 @@ ${tw`
 `}
 `;
 
-export const CardProect: React.FC = () => {
+export const CardProect: React.FC<{title?: any;}> = ({title}) => {
     return (
         <Container>
             <Wrapper>
-                <Title>Цены</Title>
+                <Title>{title}</Title>
                 <CardContainer>
                     <Card>
                         <StaticImage 
@@ -91,16 +120,20 @@ export const CardProect: React.FC = () => {
                             quality={100}
                             formats={["auto", "webp", "avif"]}
                         />
-                        <CardTitle>Рабочие чертежи</CardTitle>
-                        <List>
-                            <Item>Обмерный план</Item>
-                            <Item>Монтажные планы</Item>
-                            <Item>Рабочие чертежи перегородок и дверных проемов</Item>
-                            <Item>Рабочие чертежи по электрике</Item>
-                            <Item>Рабочие чертежи по сантехнике</Item>
-                        </List>
-                        <Price>от <b>500</b> руб/м2</Price>
-                        <Btn theme="button" to="/">заказать</Btn>
+                        <FlexContainer>
+                            <CardTitle>Рабочие чертежи</CardTitle>
+                            <List>
+                                <Item>Обмерный план</Item>
+                                <Item>Монтажные планы</Item>
+                                <Item>Рабочие чертежи перегородок и дверных проемов</Item>
+                                <Item>Рабочие чертежи по электрике</Item>
+                                <Item>Рабочие чертежи по сантехнике</Item>
+                            </List>
+                            <PriceContainer margin>
+                                <Price>от <b>500</b> руб/м2</Price>
+                                <Btn theme="button" to="/">заказать</Btn>
+                            </PriceContainer>
+                        </FlexContainer>
                     </Card>
                     <Card>
                         <StaticImage 
@@ -113,18 +146,22 @@ export const CardProect: React.FC = () => {
                             quality={100}
                             formats={["auto", "webp", "avif"]}
                         />
-                        <CardTitle>Стандартный проект</CardTitle>
-                        <List>
-                            <Item>Обмерный план</Item>
-                            <Item>Монтажные планы</Item>
-                            <Item>Рабочие чертежи перегородок и дверных проемов</Item>
-                            <Item>Рабочие чертежи по электрике</Item>
-                            <Item>Рабочие чертежи по сантехнике</Item>
-                            <Item>Трёхмерная визуализация</Item>
-                            <Item>Подбор отделочных материалов и мебели</Item>
-                        </List>
-                        <Price>от <b>1000</b> руб/м2</Price>
-                        <Btn theme="button" to="/">заказать</Btn>
+                        <FlexContainer>
+                            <CardTitle>Стандартный проект</CardTitle>
+                            <List>
+                                <Item>Обмерный план</Item>
+                                <Item>Монтажные планы</Item>
+                                <Item>Рабочие чертежи перегородок и дверных проемов</Item>
+                                <Item>Рабочие чертежи по электрике</Item>
+                                <Item>Рабочие чертежи по сантехнике</Item>
+                                <Item>Трёхмерная визуализация</Item>
+                                <Item>Подбор отделочных материалов и мебели</Item>
+                            </List>
+                            <PriceContainer margin1>
+                                <Price>от <b>1000</b> руб/м2</Price>
+                                <Btn theme="button" to="/">заказать</Btn>
+                            </PriceContainer>
+                        </FlexContainer>
                     </Card>
                     <Card>
                         <StaticImage 
@@ -137,20 +174,24 @@ export const CardProect: React.FC = () => {
                             quality={100}
                             formats={["auto", "webp", "avif"]}
                         />
-                        <CardTitle>Полный проект</CardTitle>
-                        <List>
-                            <Item>Обмерный план</Item>
-                            <Item>Монтажные планы</Item>
-                            <Item>Рабочие чертежи перегородок и дверных проемов</Item>
-                            <Item>Рабочие чертежи по электрике</Item>
-                            <Item>Рабочие чертежи по сантехнике</Item>
-                            <Item>Трёхмерная визуализация</Item>
-                            <Item>Подбор отделочных материалов и мебели</Item>
-                            <Item>Контроль за соблюдением дизайн-проекта</Item>
-                            <Item>Посещение объекта дизайнером</Item>
-                        </List>
-                        <Price>от <b>1500</b> руб/м2</Price>
-                        <Btn theme="button" to="/">заказать</Btn>
+                        <FlexContainer>
+                            <CardTitle>Полный проект</CardTitle>
+                            <List>
+                                <Item>Обмерный план</Item>
+                                <Item>Монтажные планы</Item>
+                                <Item>Рабочие чертежи перегородок и дверных проемов</Item>
+                                <Item>Рабочие чертежи по электрике</Item>
+                                <Item>Рабочие чертежи по сантехнике</Item>
+                                <Item>Трёхмерная визуализация</Item>
+                                <Item>Подбор отделочных материалов и мебели</Item>
+                                <Item>Контроль за соблюдением дизайн-проекта</Item>
+                                <Item>Посещение объекта дизайнером</Item>
+                            </List>
+                            <PriceContainer>
+                                <Price>от <b>1500</b> руб/м2</Price>
+                                <Btn theme="button" to="/">заказать</Btn>
+                            </PriceContainer>
+                        </FlexContainer>
                     </Card>
                 </CardContainer>
             </Wrapper>

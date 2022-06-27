@@ -15,31 +15,39 @@ ${tw`
 
 const Title = styled.h2`
 ${tw`
-    w-10/12
-    text-[40px]
+    lg:w-10/12
+    lg:text-[40px]
+    text-xl
+    lg:leading-[53px]
+    leading-[30px]
     text-left
     font-extrabold
-    mb-10
+    lg:mb-10
+    mb-5
 `}
 `;
 
 const Descript = styled.p`
 ${tw`
-    w-[40rem]
+    lg:w-[40rem]
     text-left
-    text-xl
-    leading-[31px]
-    font-light
+    lg:text-xl
+    text-sm
+    lg:leading-[31px]
+    leading-[22px]
+    lg:font-light
+    font-normal
     mb-5
 `}
 `;
 
 const ListContainer = styled.div`
 ${tw`
-    flex
-    justify-between
-    items-start
-    mb-10
+    lg:flex
+    lg:justify-between
+    lg:items-start
+    lg:mb-10
+    mb-5
 `}
 `;
 

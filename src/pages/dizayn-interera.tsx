@@ -17,10 +17,10 @@ export default function Design({ data }) {
   return (
       <Layout>
         <HeroDesign />
-        <DesignProect {...DesignProps} />
+        <DesignProect photo={"bgdesign"} {...DesignProps} />
         <Privilege />
         <FeaturesDesign />
-        <CardProect />
+        <CardProect title={"Цены"} />
       </Layout>
   );
 }

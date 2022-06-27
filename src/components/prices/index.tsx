@@ -9,7 +9,6 @@ import ArrowRight from "../../assets/icons/arr_right_blue.svg";
 
 const Container = styled.section`
 ${tw`
-    text-center
     mb-5
     lg:mb-20
     py-[10px]
@@ -19,11 +18,25 @@ ${tw`
 
 const Title = styled.h2`
 ${tw`
+    text-left
+    lg:text-center
     text-xl
     lg:text-4xl
     font-extrabold
     mb-2
     lg:mb-12
+`}
+`;
+
+const PostTitle = styled.p`
+${tw`
+    text-left
+    mb-2
+    lg:mb-12
+    lg:font-normal
+    font-light
+    text-xs
+    lg:text-xl
 `}
 `;
 
@@ -99,7 +112,8 @@ ${tw`
 export const Prices: React.FC<{
 children?: React.ReactChild;
 bg?: any;
-}> = ({children, bg}) => {
+Post?: any;
+}> = ({children, bg, Post}) => {
     
 const [active1, setActive1] = useState(false);
 const [active2, setActive2] = useState(false);
@@ -110,6 +124,7 @@ const [active4, setActive4] = useState(false);
         <Container className={bg}>
             <Wrapper>
                 <Title>{children}</Title>
+                <PostTitle>{Post}</PostTitle>
                 <List>
                     <Item>
                         <Button onMouseOut={() => setActive1(false)} onMouseOver={() => setActive1(true)} theme="price" to={'/'}>

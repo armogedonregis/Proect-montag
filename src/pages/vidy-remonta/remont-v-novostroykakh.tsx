@@ -1,7 +1,12 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import { CardNew } from '../../components/cardNew';
+import { Experience } from '../../components/experience';
 import { HeroApart } from '../../components/heroApart';
 import Layout from '../../components/layout';
+import { Material } from '../../components/material';
+import { Prices } from '../../components/prices';
+import { RecordView } from '../../components/recordView';
 
 export default function NewRemont({ data }) {
 
@@ -13,7 +18,12 @@ export default function NewRemont({ data }) {
 
   return (
     <Layout>
-      <HeroApart mb={"mb-[120px]"} {...HeroProps} />
+      <HeroApart bg={"bgnew"} mb={"mb-[5px] lg:mb-[120px]"} {...HeroProps} />
+      <CardNew />
+      <RecordView />
+      <Material />
+      <Experience />
+      <Prices children={"Цены"} />
     </Layout>
   );
 };

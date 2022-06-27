@@ -7,24 +7,45 @@ import Check from "../../assets/icons/check.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
 
-const Container = styled.section`
+const Container = styled.section<{
+    pages?: boolean;
+}>`
 ${tw`
-    text-center
-    mb-2
-    lg:mb-10
     bg-bgWhite
     lg:w-screen
     py-[2rem]
     lg:py-[6rem]
 `};
+${({ pages }) =>
+pages ? tw`-mt-5 lg:-mt-20` : tw`mb-2 lg:mb-10`
+}
 `;
 
-const Title = styled.h2`
+const Title = styled.h2<{ centre?: boolean; }>`
 ${tw`
+    text-center
     text-xl
     lg:text-[40px]
     font-extrabold
-    mb-10
+    lg:mb-10
+    mb-4
+`}
+${({ centre }) => 
+centre ? tw`text-left` : tw`text-center`
+}
+`;
+
+const PostTitle = styled.p`
+${tw`
+    lg:leading-[31px]
+    leading-[22px]
+    lg:font-normal
+    font-light
+    lg:text-xl
+    text-sm
+    lg:w-7/12
+    mb-4
+    lg:mb-10
 `}
 `;
 
@@ -90,11 +111,17 @@ ${tw`
 `;
 
 
-export const Questions: React.FC = () => {
+export const Questions: React.FC<{
+    centr?: boolean;
+    TitleQ?: any;
+    TitleP?: any;
+    pag?: boolean;
+}> = ({centr, TitleQ, TitleP, pag}) => {
     return (
-        <Container>
+        <Container pages={pag}>
             <Wrapper>
-                <Title>Ремонт без забот</Title>
+                <Title centre={centr}>{TitleQ}</Title>
+                <PostTitle>{TitleP}</PostTitle>
                 <ListContainer>
                     <ListLeft>
                         <List>

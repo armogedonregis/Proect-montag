@@ -18,7 +18,7 @@ export default function HouseRemont({ data }) {
 
   return (
     <Layout>
-      <HeroApart mb={"mb-[120px]"} {...HeroProps} />
+      <HeroApart bg={"bgvac"} mb={"mb-[120px]"} {...HeroProps} />
       <Dogovor />
       <Company />
       <Prices children={"Чем мы можем быть полезны для Вас"} />

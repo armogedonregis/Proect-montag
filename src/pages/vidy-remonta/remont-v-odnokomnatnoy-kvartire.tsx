@@ -14,11 +14,13 @@ export default function OneRemont({ data }) {
   const { heroTitle, heroPostTitle, descrHero, TitleOne, DescrTitle, FeaturesTitle, 
     FeaturesPreDescr, FeaturesItem, FeaturesPostDescr } = propsText;
 
+  
+
   const HeroProps = { heroTitle, heroPostTitle, descrHero };
 
     const PostProps = { TitleOne, DescrTitle, FeaturesTitle, 
       FeaturesPreDescr, FeaturesItem, FeaturesPostDescr };
-
+      
   return (
     <Layout>
       <HeroApart {...HeroProps} />

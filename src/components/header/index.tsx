@@ -164,10 +164,10 @@ export const Header: React.FC = () => {
               </BurgeItem>
               <BurgeItem><Button to={'/dizayn-interera'} theme="burger">Дизайн интерьера</Button></BurgeItem>
                     <BurgeItem><Button to={'/protsess-remonta'} theme="burger">Процесс ремонта</Button></BurgeItem>
-                    <BurgeItem><Button to={'/nashi-raboty'} theme="burger">Наши работы</Button></BurgeItem>
+                    {/*<BurgeItem><Button to={'/nashi-raboty'} theme="burger">Наши работы</Button></BurgeItem>*/}
                     <BurgeItem><Button to={'/tseny'} theme="burger">Цены</Button></BurgeItem>
                     <BurgeItem><Button to={'/kontakty'} theme="burger">Контакты</Button></BurgeItem>
-                    <BurgeItem><Button to={'/stati-o-remonte'} theme="burger">Статьи о ремонте</Button></BurgeItem>
+                    {/*<BurgeItem><Button to={'/stati-o-remonte'} theme="burger">Статьи о ремонте</Button></BurgeItem>*/}
                     <BurgeItem><Button to={'/vidirimonti'} theme="burger">Калькулятор ремонта</Button></BurgeItem>
               </BurgerList>
                 }

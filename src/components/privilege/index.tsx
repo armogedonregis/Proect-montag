@@ -7,17 +7,21 @@ import Check from "../../assets/icons/check.svg";
 
 const Container = styled.section`
 ${tw`
-    text-center
-    mb-10
+    text-left
+    lg:text-center
+    lg:mb-10
+    mb-5
     bg-bgWhite-blue
     w-screen
-    py-[6rem]
+    py-[25px]
+    lg:py-[6rem]
 `};
 `;
 
 const Title = styled.h2`
 ${tw`
-    text-[40px]
+    lg:text-[40px]
+    text-xl
     font-extrabold
     mb-10
 `}
@@ -32,22 +36,28 @@ ${tw`
 
 const List = styled.ul`
 ${tw`
-    mb-10
+    lg:mb-10
+    mb-5
 `}
 `;
 
 const Item = styled.li`
 ${tw`
     flex
-    text-xl
+    lg:text-xl
+    text-sm
     font-light
-    mb-3
+    lg:mb-3
+    mb-2
+    py-2
 `}
 `;
 
 const Descr = styled.span`
 ${tw`
-    ml-6
+    block
+    lg:ml-6
+    ml-3
 `}
 `;
 

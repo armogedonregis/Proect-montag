@@ -8,6 +8,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const Container = styled.div`
 ${tw`
     relative
+    w-screen
     lg:mb-32
     mb-5
 `};
@@ -15,8 +16,11 @@ ${tw`
 
 const ImageContainer = styled.div`
 ${tw`
-    w-[150vw]
-    lg:w-full
+    max-w-screen-md
+    md:max-w-screen-lg
+    md:h-screen
+    h-[270px]
+    lg:max-w-full
 `}
 `;
 
@@ -37,10 +41,11 @@ const Title = styled.h1`
 ${tw`
     lg:w-[35rem]
     lg:leading-[66px]
-    md:leading-[20px]
+    leading-[20px]
     text-primary
     font-extrabold
-    mb-2
+    text-xl
+    mb-12
     md:text-2xl
     lg:text-4xl
     xl:text-5xl
@@ -77,6 +82,10 @@ export const HeroDesign: React.FC = () => {
                     src={"../../assets/images/bg/banner_design.jpg"} 
                     alt={""}
                     layout="fullWidth"
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
                     quality={100}
                     formats={["auto", "webp", "avif"]}
                 />

@@ -24,13 +24,10 @@ const ButtonForNavLink = styled(Link)`
   md:text-xs
   lg:text-sm
   xl:text-base
-  hover:bg-btn
   md:px-1
   lg:px-4
   xl:px-5
-  md:py-[0.9rem]
-  lg:py-[0.8rem]
-  -ml-4
+  md:py-[0.6rem]
 `}
 `;
 
@@ -44,8 +41,10 @@ ${tw`
 const ButtonForFootLink = styled(Link)`
   ${tw`
   text-white
-  text-base
-  font-semibold
+  lg:text-base
+  text-sm
+  lg:font-semibold
+  font-normal
   hover:text-btn-gray
 `}
 `;

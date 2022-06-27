@@ -9,32 +9,42 @@ import Check from "../../assets/icons/check_white.svg";
 const Container = styled.div`
 ${tw`
     w-screen
-    mb-20
+    lg:mb-20
+    mb-5
     text-left
     bg-bgWhite-gray
     pt-4
-    pb-20
+    lg:pb-20
+    pb-4
 `};
 `;
 
 const Title = styled.h1`
 ${tw`
-    text-5xl
-    leading-[66px]
+    lg:text-[50px]
+    text-xl
+    md:text-[30px]
+    leading-[25px]
+    md:leading-[45px]
+    lg:leading-[66px]
     text-primary
     tracking-wider
     font-extrabold
-    mb-12
+    lg:mb-12
+    mb-5
 `};
 `;
 
 const NavBtn = styled.div`
 ${tw`
     bg-white
-    flex
-    items-center
-    justify-around
-    p-[20px 190px]
+    md:flex
+    md:items-start
+    lg:items-center
+    md:justify-around
+    md:p-[20px 190px]
+    p-[21px]
+    text-center
     shadow-cardKinds
     rounded
     mb-12
@@ -43,23 +53,28 @@ ${tw`
 
 const PriceTitle = styled.span`
 ${tw`
+    block
     text-accent
-    text-3xl
+    lg:text-3xl
+    text-base
     font-semibold
+    mb-3 lg:mb-0
 `}
 `;
 
 const Price = styled.b`
 ${tw`
-    text-4xl
+    lg:text-4xl
+    text-xl
     font-extrabold
 `}
 `;
 
 const CardContainer = styled.div`
 ${tw`
-    flex
-    justify-between
+    lg:flex
+    lg:justify-between
+    display[none]
 `}
 `;
 

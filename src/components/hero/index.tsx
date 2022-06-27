@@ -12,6 +12,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const Container = styled.div`
 ${tw`
     relative
+    w-screen
     mb-5
     lg:mb-32
 `};
@@ -19,7 +20,11 @@ ${tw`
 
 const ImageContainer = styled.div`
 ${tw`
-    w-[150vw]
+    max-w-screen-md
+    md:max-w-screen-lg
+    md:h-screen
+    h-[270px]
+    lg:max-w-full
     lg:w-full
 `}
 `;
@@ -172,6 +177,10 @@ export const Hero: React.FC = () => {
                     src={"../../assets/images/bg/banner.jpg"} 
                     alt={""}
                     layout="fullWidth"
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
                     quality={100}
                     formats={["auto", "webp", "avif"]}
                 />
