@@ -12,7 +12,7 @@ const Container = styled.section<{
 }>`
 ${tw`
     bg-bgWhite
-    lg:w-screen
+    w-screen
     py-[2rem]
     lg:py-[6rem]
 `};

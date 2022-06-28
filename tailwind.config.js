@@ -36,6 +36,7 @@ module.exports = {
       },
       boxShadow: {
         'card': '10px 5px 30px 20px #E0E0E0',
+        'cardMob': '10px 5px 30px 20px #F1F1F1',
         'cardKinds': '1px 1px 25px 4px #E6E6E6',
       },
     },

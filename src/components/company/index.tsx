@@ -7,9 +7,9 @@ import Refresh from "../../assets/icons/refresh.svg";
 
 const Container = styled.section`
   ${tw`
-  lg:w-screen
+  w-screen
   lg:bg-bgWhite
-  p-[70px 0 30px]
+  lg:p-[70px 0 30px]
   `};
 `;
 
@@ -26,12 +26,24 @@ const Descr = styled.h3`
   font-normal
   lg:text-2xl
   text-sm
+  mb-[15px] lg:mb-[initial]
   `};
 `;
 
-const CardContainer = styled.div<{ master?: boolean }>`
+const CardContainer = styled.div<{ 
+    master?: boolean;
+    mobile?: boolean; 
+}>`
 ${({ master }) => 
-master ? tw`pl-[80px] mt-[30px]` : tw`flex lg:justify-between mt-[25px] lg:mt-[50px]`
+master ? tw`pl-[92px] lg:pl-[80px] lg:mt-[30px]` :
+tw`flex flex-col lg:flex-row lg:justify-between 
+lg:mt-[50px]
+svg:display[none]
+svg:lg:display[block]
+`
+}
+${({ mobile }) =>
+mobile && tw`flex-col-reverse`
 }
 `;
 
@@ -42,18 +54,19 @@ const Card = styled.div<{
 }>`
 ${tw`
     text-left
-    p-[30px]
+    lg:p-[30px]
+    p-[20px 15px 15px]
     rounded
 `}
 ${({ stand }) => 
 stand && tw`relative`
 }
 ${({ blue, orange, person, brigade }) => 
-blue ? tw`bg-accent relative w-[460px]` : 
-orange ? tw`bg-tertiary w-[460px]` :
-person ? tw`relative bg-white shadow-card w-[320px] ml-[31px]` :
-brigade ? tw`flex items-end bg-white shadow-card pb-[15px] w-full` :
-tw`bg-white shadow-card w-[364px]`
+blue ? tw`bg-accent mb-[15px] lg:mb-[initial] relative w-[initial] lg:w-[400px] xl:w-[460px]` : 
+orange ? tw`bg-tertiary mb-5 lg:mb-[initial] w-[initial] lg:w-[400px] xl:w-[460px]` :
+person ? tw`relative bg-white shadow-cardMob lg:shadow-card w-[initial] lg:w-[260px] xl:w-[320px] h-[170px] lg:h-[initial] ml-[50px] lg:ml-[31px] mb-[15px] lg:mb-[initial]` :
+brigade ? tw`lg:flex lg:items-end bg-white shadow-cardMob lg:shadow-card mb-[15px] lg:mb-[initial] lg:pb-[15px] h-[initial] sm:h-[170px] lg:h-[initial] w-[initial] lg:w-full` :
+tw`bg-white ml-[50px] lg:ml-[initial] mb-[15px] lg:mb-[initial] shadow-cardMob lg:shadow-card h-[170px] lg:h-[initial] w-[initial] lg:w-[330px] xl:w-[364px]`
 }
 `;
 
@@ -64,31 +77,46 @@ const Linea = styled.div<{
 }>`
 ${({ fourth, fifth }) => 
 fourth || fifth ?
-`border-radius: 0 15px 0 0;
-border-right: 6px solid #0a68c8;
-border-top: 6px solid #0a68c8;`
+`
+@media (min-width: 1024px) {
+    border-radius: 0 15px 0 0;
+    border-right: 6px solid #0a68c8;
+    border-top: 6px solid #0a68c8;
+}
+
+@media (max-width: 1023px) {
+    border-radius: 0 0 0 15px;
+    border-left: 6px solid #0a68c8; 
+    border-bottom: 6px solid #0a68c8;
+}
+`
 :
-`border-radius: 0 0 0 15px;
+`
+border-radius: 0 0 0 15px;
 border-left: 6px solid #0a68c8; 
-border-bottom: 6px solid #0a68c8;`
+border-bottom: 6px solid #0a68c8;
+`
 }
 ${tw`
     absolute
     z-20
 `}
 ${({ first, second, third, fourth, fifth }) =>
-first ? tw`left-[13px] bottom-[-150px] w-[18px] h-[155px]` :
-second ? tw`left-[24px] bottom-[-110px] w-[25px] h-[110px]` :
-third ? tw`left-[220px] bottom-[-30px] w-[815px] h-[30px]` :
-fourth ? tw`w-[25px] h-[25px] left-[141px] top-[-26px]` :
-fifth ? tw`w-[25px] h-[25px] left-[150px] top-[-26px]` : tw``
+first ? tw`left-[13px] bottom-[-450px] lg:bottom-[-150px] lg:w-[18px] w-[37px] h-[450px] lg:h-[155px]` :
+second ? tw`left-[-37px] lg:left-[24px] bottom-[41px] lg:bottom-[-110px] w-[37px] lg:w-[25px] h-[10px] lg:h-[110px]` :
+third ? tw`display[none] lg:block left-[220px] bottom-[-30px] lg:w-[600px] xl:w-[815px] h-[30px]` :
+fourth ? tw`w-[37px] lg:w-[25px] h-[10px] lg:h-[25px] left-[-37px] lg:left-[141px] top-[82px] lg:top-[-26px]` :
+fifth ? tw`w-[33px] lg:w-[270px] xl:w-[25px] h-[115px] lg:h-[25px] left-[9px] lg:left-[-100px] xl:left-[141px] top-[170px] lg:top-[-26px]` : tw``
 }
 `;
 
 const CardTitle = styled.h4<{ colorTitle?: boolean }>`
 ${tw`
     font-black
-    text-xl
+    lg:text-xl
+    lg:leading-[24px]
+    text-base
+    leading-[20px]
     mb-4
 `}
 ${({ colorTitle }) => 
@@ -98,28 +126,36 @@ colorTitle ? tw`text-white` : tw`text-primary`
 
 const CardText = styled.p<{ colorText?: boolean; brigadeText?: boolean; }>`
 ${tw`
-    text-base
+    lg:text-base
+    text-xs
+    font-light
+    leading-[20px]
+    lg:font-normal
 `}
 ${({ colorText }) => 
 colorText ? tw`text-white` : tw`text-primary`
 }
 ${({ brigadeText }) => 
-brigadeText && tw`m-[2px 0 16px 80px]`
+brigadeText && tw`lg:m-[2px 0 16px 80px]`
 }
 `;
 
 const QuestionContainer = styled.div`
 ${tw`
     flex
-    justify-center
+    flex-col 
+    lg:flex-row
+    items-center
+    lg:justify-center
     py-[50px]
 `}
 `;
 
 const QuestionText = styled.i`
 ${tw`
-    text-2xl
-    w-4/12
+    mb-2 lg:mb-[initial]
+    lg:text-2xl
+    lg:w-4/12
 `}
 `;
 
@@ -129,7 +165,7 @@ export const Company: React.FC = () => {
             <Wrapper>
                 <Title>Компания полного цикла</Title>
                 <Descr>Ремонт под ключ вместе с нами</Descr>
-                <CardContainer>
+                <CardContainer mobile>
                     <Card blue>
                         <CardTitle colorTitle>Руководитель проекта</CardTitle>
                         <CardText colorText>На каждом объекте работают узкопрофильные специалисты, ответственные только за свою работу. За весь процесс ремонта ответственным лицом является руководитель.
@@ -170,7 +206,7 @@ export const Company: React.FC = () => {
                 </CardContainer>
                 <QuestionContainer>
                     <QuestionText>Есть вопрос? Задайте его руководителю проектов</QuestionText>
-                    <Button className="px-[100px]" theme="button" to="/">задать вопрос</Button>
+                    <Button className="lg:px-[100px]" theme="button" to="/">задать вопрос</Button>
                 </QuestionContainer>
             </Wrapper>
         </Container>

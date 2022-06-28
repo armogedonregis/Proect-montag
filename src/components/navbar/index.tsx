@@ -14,7 +14,6 @@ ${tw`
     top-0
     z-50
     display[none]
-    md:block
     lg:flex lg:items-center
 `};
 `;

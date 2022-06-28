@@ -13,32 +13,39 @@ const Container = styled.section`
 
 const Title = styled.h2`
   ${tw`
-  text-center font-extrabold text-[40px] mb-10
+  lg:text-center font-extrabold lg:text-[40px] lg:mb-10
+  text-xl text-left mb-5
   `};
 `;
 
 const List = styled.ul`
 ${tw`
     flex
-    justify-evenly
+    lg:justify-evenly
+    flex-wrap
 `}
 `;
 
 const Item = styled.li`
 ${tw`
+    w-1/2 lg:w-[initial]
     flex
     flex-col
-    text-xl
+    lg:text-xl
+    text-sm
     text-center
+    mb-3 lg:mb-[initial]
 `}
 `;
 
 const Metr = styled.b`
 ${tw`
     text-accent
-    text-3xl
+    lg:text-3xl
+    text-xl
     font-extrabold
-    mb-3
+    lg:mb-3
+    mb-1
 `}
 `;
 

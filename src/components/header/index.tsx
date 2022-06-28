@@ -24,14 +24,14 @@ const Head = styled.header`
 const Desktop = styled.div`
   ${tw`
   text-right
-  md:block
+  lg:block
   display[none]
   `};
 `;
 
 const Mobile = styled.div`
   ${tw`
-  md:hidden
+  lg:hidden
   flex
   items-center
   `};
@@ -92,10 +92,10 @@ const BurgerList1 = styled.ul`
     background: #ffffff;
     font-size: 14px;
     padding: 10px 0 17px;
+    border-top: 1px solid #bfdfff;
 ${tw`
-    
     z-40
-    
+    mt-1
 `}
 `;
 

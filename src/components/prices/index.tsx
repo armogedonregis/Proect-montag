@@ -19,7 +19,7 @@ ${tw`
 const Title = styled.h2`
 ${tw`
     text-left
-    lg:text-center
+    md:text-center
     text-xl
     lg:text-4xl
     font-extrabold
@@ -127,7 +127,7 @@ const [active4, setActive4] = useState(false);
                 <PostTitle>{Post}</PostTitle>
                 <List>
                     <Item>
-                        <Button onMouseOut={() => setActive1(false)} onMouseOver={() => setActive1(true)} theme="price" to={'/'}>
+                        <Button onMouseOut={() => setActive1(false)} onMouseOver={() => setActive1(true)} theme="price" to={'/vidy-remonta/kosmeticheskiy-remont'}>
                             <StaticImage 
                                 placeholder={"blurred"}
                                 src={"../../assets/images/price_1.jpg"} 
@@ -154,7 +154,7 @@ const [active4, setActive4] = useState(false);
                         </Button>
                     </Item>
                     <Item>
-                        <Button onMouseOut={() => setActive2(false)} onMouseOver={() => setActive2(true)} theme="price" to={'/'}>
+                        <Button onMouseOut={() => setActive2(false)} onMouseOver={() => setActive2(true)} theme="price" to={'/vidy-remonta/kapitalniy-remont'}>
                         <StaticImage 
                                 placeholder={"blurred"}
                                 src={"../../assets/images/price_2.jpg"} 
@@ -181,7 +181,7 @@ const [active4, setActive4] = useState(false);
                         </Button>
                     </Item>
                     <Item>
-                        <Button onMouseOut={() => setActive3(false)} onMouseOver={() => setActive3(true)} theme="price" to={'/'}>
+                        <Button onMouseOut={() => setActive3(false)} onMouseOver={() => setActive3(true)} theme="price" to={'/vidy-remonta/evroremont/'}>
                         <StaticImage 
                                 placeholder={"blurred"}
                                 src={"../../assets/images/price_3.jpg"} 
@@ -208,7 +208,7 @@ const [active4, setActive4] = useState(false);
                         </Button>
                     </Item>
                     <Item>
-                        <Button onMouseOut={() => setActive4(false)} onMouseOver={() => setActive4(true)} theme="price" to={'/'}>
+                        <Button onMouseOut={() => setActive4(false)} onMouseOver={() => setActive4(true)} theme="price" to={'/vidy-remonta/elitnyy-remont/'}>
                         <StaticImage 
                                 placeholder={"blurred"}
                                 src={"../../assets/images/price_4.jpg"} 
