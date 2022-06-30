@@ -8,40 +8,53 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Container = styled.section`
 ${tw`
-    text-center
-    mb-10
+    lg:text-center
+    text-left
+    lg:mb-10
+    mb-5
     bg-bgWhite-blue
     w-screen
-    p-[140px 0 0]
+    pt-[25px]
+    lg:p-[140px 0 0]
 `};
 `;
 
 const Title = styled.h2`
 ${tw`
-    w-[38rem]
-    text-[40px]
+    lg:leading-[53px]
+    lg:w-[38rem]
+    lg:text-[40px]
+    text-xl
     text-left
     font-extrabold
-    mb-10
+    lg:mb-10
+    mb-5
 `}
 `;
 
 const Descript = styled.p`
 ${tw`
-    w-[40rem]
+    lg:w-[40rem]
     text-left
-    text-xl
-    font-normal
-    mb-10
+    lg:text-xl
+    text-sm
+    lg:font-normal
+    font-light
+    lg:mb-10
+    mb-3
 `}
 `;
 
 const ListContainer = styled.div`
 ${tw`
     flex
-    justify-between
-    items-start
-    mb-10
+    lg:flex-row
+    flex-col
+    lg:justify-between
+    lg:items-start
+    items-center
+    lg:mb-10
+    mb-5
 `}
 `;
 
@@ -53,7 +66,11 @@ ${tw`
 
 const ListRight = styled.div`
 ${tw`
-    -mt-10
+    lg:-mt-10
+    mb-[-15px]
+    lg:mb-[initial]
+    w-[210px] h-[265px]
+    lg:w-[initial] lg:h-[initial]
 `}
 `;
 
@@ -67,8 +84,9 @@ ${tw`
     flex
     items-center
     text-left
-    text-xl
-    font-light
+    lg:text-xl
+    text-sm
+    lg:font-light
     mb-3
 `}
 `;

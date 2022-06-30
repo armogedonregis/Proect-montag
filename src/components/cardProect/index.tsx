@@ -78,6 +78,7 @@ ${tw`
     flex-col
     lg:mt-5
     mt-2
+    md:mt-[218px]
 `}
 ${({ margin }) => 
 margin && tw`lg:mt-[196px]`

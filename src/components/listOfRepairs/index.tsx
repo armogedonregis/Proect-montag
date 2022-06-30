@@ -79,10 +79,176 @@ ${tw`
 `}
 `;
 
+export const ImageListRepair: React.FC<{
+num?: Number;
+}> = ({num}) => {
+    if (num === 1) {
+        return (
+            <>
+            <ImgDesc>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/perechen_img1.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgDesc>
+            <ImgMobile>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/mob_perechen_img1.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgMobile>
+            </>
+        )
+    }
+    if (num === 2) {
+        return (
+            <>
+            <ImgDesc>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/perechen_img2.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgDesc>
+            <ImgMobile>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/mob_perechen_img2.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgMobile>
+            </>
+        )
+    }
+    if (num === 3) {
+        return (
+            <>
+            <ImgDesc>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/perechen_img3.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgDesc>
+            <ImgMobile>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/mob_perechen_img3.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgMobile>
+            </>
+        )
+    }
+    if (num === 4) {
+        return (
+            <>
+            <ImgDesc>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/perechen_img4.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgDesc>
+            <ImgMobile>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/mob_perechen_img4.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgMobile>
+            </>
+        )
+    }
+    if (num === 5) {
+        return (
+            <>
+            <ImgDesc>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/perechen_img5.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgDesc>
+            <ImgMobile>
+                <StaticImage 
+                    placeholder={"blurred"}
+                    src={"../../assets/images/mob_perechen_img5.jpg"} 
+                    alt={""}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                />
+            </ImgMobile>
+            </>
+        )
+    }
+};
+
 export const ListOff: React.FC<{
     item: any;
     ItemsTitle: any;
-}> = ({ item, ItemsTitle }) => {
+    nums: any;
+}> = ({ item, ItemsTitle, nums }) => {
     return (
                 <Content>
                     <TextContainer>
@@ -96,47 +262,22 @@ export const ListOff: React.FC<{
                         })}
                         </List>
                     </TextContainer>
-                    <ImgDesc>
-                        <StaticImage 
-                            placeholder={"blurred"}
-                            src={"../../assets/images/perechen_img1.jpg"} 
-                            alt={""}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                            }}
-                            quality={100}
-                            formats={["auto", "webp", "avif"]}
-                        />
-                    </ImgDesc>
-                    <ImgMobile>
-                        <StaticImage 
-                            placeholder={"blurred"}
-                            src={"../../assets/images/mob_perechen_img1.jpg"} 
-                            alt={""}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                            }}
-                            quality={100}
-                            formats={["auto", "webp", "avif"]}
-                        />
-                    </ImgMobile>
+                        <ImageListRepair num={nums}  />
                 </Content>
     )
-}
+};
 
 export const ListOfRepairs: React.FC<{
     Items: any;
 }> = ({Items}) => {
-
+let i = 1;
     return (
         <Wrapper>
             <Container>
                 <Title>Перечень ремонтных работ</Title>
-                {Items.map((item, ItemsTitle) => {
+                {Items.map((product, id) => {
                     return (
-                        <ListOff key={+new Date() + Math.random()} {...item} {...ItemsTitle} />
+                        <ListOff key={+new Date() + Math.random()} nums={id + 1} {...product} />
                     )
                 })
                 }

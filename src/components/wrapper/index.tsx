@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   max-w-screen-md
   w-screen
   px-4
-  lg:max-w-screen-xl
+  lg:max-w-screen-lg
+  xl:max-w-screen-xl
   `}
 `;

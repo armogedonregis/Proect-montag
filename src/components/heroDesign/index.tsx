@@ -28,9 +28,7 @@ const Text = styled.div`
 ${tw`
     block
     absolute
-    top-[1rem]
-    md:top-[3rem]
-    lg:top-[2rem]
+    top-[3rem]
     xl:top-[6rem]
     text-white
     tracking-wider
@@ -45,7 +43,8 @@ ${tw`
     text-primary
     font-extrabold
     text-xl
-    mb-12
+    mb-5
+    md:mb-12
     md:text-2xl
     lg:text-4xl
     xl:text-5xl
@@ -91,6 +90,11 @@ export const HeroDesign: React.FC = () => {
                 />
             </ImageContainer>
             <Wrapper>
+                <div className="absolute top-[5px] lg:top-[20px]">
+                    <Button theme="navigate" to={'/'}>Главная</Button>
+                    <span className="text-xs lg:text-sm text-primary"> / </span>
+                    <span className="text-xs lg:text-sm text-primary">Дизайн интерьера</span>
+                </div>
                 <Text>
                     <Title>Дизайн интерьера от Проект Монтаж</Title>
                     <Descr>У вас есть идеи, но вы не знаете как их реализовать? 

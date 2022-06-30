@@ -29,7 +29,6 @@ const BurgerList = styled.ul`
 width: 320px;
     box-shadow: 0px 5px 16px -8px #c5c5c5;
     background: #ffffff;
-    z-index: 9;
     font-size: 14px;
     padding: 10px 0 17px;
     border-radius: 0 0 7px 7px;
@@ -37,6 +36,7 @@ ${tw`
     absolute
     top-[49px]
     left-[0px]
+    z-50
 `}
 `;
 

@@ -17,6 +17,7 @@ const FlexContainer = styled.div`
   ${tw`
   md:flex 
   md:justify-between
+  md:items-baseline
   `};
 `;
 
@@ -31,6 +32,32 @@ const Item = styled.li`
   `};
 `;
 
+const StlBtn = styled(Button)<{ btn?: any; }>`
+${({btn}) =>
+btn ? 
+tw`
+    text-white 
+    text-base 
+    lg:text-lg 
+    hover:text-btn-gray 
+    hover:border-btn-gray 
+    border-b 
+    border-dashed 
+    border-white
+`
+:
+tw`
+text-white 
+text-sm 
+lg:text-base 
+hover:text-btn-gray 
+hover:border-btn-gray 
+lg:tracking-wider 
+border-white 
+mb-4
+`
+}
+`;
 
 export const Footer: React.FC = () => {
     return (
@@ -64,9 +91,9 @@ export const Footer: React.FC = () => {
                         {/*<Item><Button to={'/stati-o-remonte'} theme="footLink">Статьи о ремонте</Button></Item>*/}
                     </List>
                     <div>
-                        <b><Button className="text-white text-base lg:text-lg hover:text-btn-gray hover:border-btn-gray border-b border-dashed border-white" theme="phone" href="tel:+79255775456">+7 (925) 577-54-56</Button></b>
+                        <StlBtn btn theme="phone" href="tel:+79255775456"><b>+7 (925) 577-54-56</b></StlBtn>
                         <br />
-                        <Button className="text-white text-sm lg:text-base hover:text-btn-gray hover:border-btn-gray lg:tracking-wider border-white mb-4" theme="call">Заказать звонок</Button>
+                        <StlBtn theme="call">Заказать звонок</StlBtn>
                         <br />
                         <span className="text-white text-sm lg:text-base">Ежедневно с <b>8:00</b></span>
                         <br />

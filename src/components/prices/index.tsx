@@ -16,12 +16,23 @@ ${tw`
 `}
 `;
 
+const HeroTitle = styled.h1`
+${tw`
+    text-left
+    text-xl
+    lg:text-[50px]
+    font-extrabold
+    mb-2
+    lg:mb-12
+`}
+`;
+
 const Title = styled.h2`
 ${tw`
     text-left
     md:text-center
     text-xl
-    lg:text-4xl
+    lg:text-[40px]
     font-extrabold
     mb-2
     lg:mb-12
@@ -113,7 +124,9 @@ export const Prices: React.FC<{
 children?: React.ReactChild;
 bg?: any;
 Post?: any;
-}> = ({children, bg, Post}) => {
+textLg?: any;
+HeroText?: any;
+}> = ({children, bg, Post, HeroText}) => {
     
 const [active1, setActive1] = useState(false);
 const [active2, setActive2] = useState(false);
@@ -123,6 +136,7 @@ const [active4, setActive4] = useState(false);
     return (
         <Container className={bg}>
             <Wrapper>
+                <HeroTitle>{HeroText}</HeroTitle>
                 <Title>{children}</Title>
                 <PostTitle>{Post}</PostTitle>
                 <List>

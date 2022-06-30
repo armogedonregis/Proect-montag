@@ -5,14 +5,22 @@ import { Wrapper } from "../wrapper";
 
 const Jobs = styled.section`
   ${tw`
-  mb-20
+  lg:mb-20
+  mb-10
   mx-auto
   `};
 `;
 
 const Title = styled.h2`
   ${tw`
-  text-left font-extrabold text-[40px] mb-10
+  text-left 
+  font-extrabold 
+  lg:text-[40px]
+  lg:leading-[53px]
+  text-xl 
+  leading-[24px]
+  lg:mb-10
+  mb-3.5
   `};
 `;
 
@@ -20,9 +28,11 @@ const Descr = styled.p`
   ${tw`
   mx-auto
   text-left
-  text-xl 
+  lg:text-xl
+  text-sm 
   font-normal
-  leading-8
+  lg:leading-8
+  leading-[22px]
   `};
 `;
 

@@ -26,9 +26,7 @@ const Text = styled.div<{ textColor: boolean; }>`
 ${tw`
     block
     absolute
-    top-[1rem]
-    md:top-[3rem]
-    lg:top-[2rem]
+    top-[4rem]
     xl:top-[6rem]
     lg:tracking-wider
 `}
@@ -43,10 +41,9 @@ ${tw`
     xl:text-6xl
     font-extrabold
     lg:leading-[65px]
-    mb-1
-    lg:mb-4
-    leading-[20px]
-    text-xl
+    mb-4
+    text-lg
+    leading-[24px]
     md:text-2xl
     lg:text-4xl
     w-[300px]
@@ -67,7 +64,7 @@ ${tw`
     flex
     italic
     text-sm
-    mt-[30px]
+    mt-[10px]
     mb-4
     lg:text-2xl
     lg:mt-14
@@ -148,6 +145,13 @@ export const HeroApart: React.FC<{
                 <Bgrnd theme={bg} />
             </ImageContainer>
             <Wrapper>
+                <div className="absolute top-[5px] lg:top-[20px]">
+                    <Button theme="navigate" to={'/'}>Главная</Button>
+                    <span className="text-xs lg:text-sm text-primary"> / </span>
+                    <Button theme="navigate" to={'/vidy-remonta/'}>Виды ремонта</Button>
+                    <span className="text-xs lg:text-sm text-primary"> / </span>
+                    <span className="text-xs lg:text-sm text-primary">{heroTitle}</span>
+                </div>
                 <Text textColor={color}>
                     <Title>{heroTitle}<br />{heroPostTitle}</Title>
                     <Key>{descrHero}</Key>

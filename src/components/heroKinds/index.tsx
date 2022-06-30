@@ -13,9 +13,11 @@ ${tw`
     mb-5
     text-left
     bg-bgWhite-gray
-    pt-4
+    pt-14
+    lg:pt-16
     lg:pb-20
     pb-4
+    relative
 `};
 `;
 
@@ -125,6 +127,13 @@ export const HeroKinds: React.FC<{
     return (
         <Container>
             <Wrapper>
+                <div className="absolute top-[5px] lg:top-[20px]">
+                    <Button theme="navigate" to={'/'}>Главная</Button>
+                    <span className="text-xs lg:text-sm text-primary"> / </span>
+                    <Button theme="navigate" to={'/vidy-remonta/'}>Виды ремонта</Button>
+                    <span className="text-xs lg:text-sm text-primary"> / </span>
+                    <span className="text-xs lg:text-sm text-primary"> {title.substring(0, title.lastIndexOf(" "))}</span>
+                </div>
                 <Title>{title}</Title>
                 <NavBtn>
                     <PriceTitle>от <Price>{price}</Price> руб/м2</PriceTitle>

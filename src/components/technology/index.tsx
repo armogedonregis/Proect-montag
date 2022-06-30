@@ -6,24 +6,29 @@ import { Wrapper } from "../wrapper";
 
 const Container = styled.section`
 ${tw`
-  mb-20
+  lg:mb-20
+  mb-10
 `}
 `;
 
 const Title = styled.h2`
   ${tw`
-    px-[13rem]
-    text-[40px]
-    text-center
+    lg:px-[13rem]
+    lg:text-[40px]
+    lg:leading-[53px]
+    text-xl
+    lg:text-center
+    text-left
     font-extrabold
-    mb-10
+    lg:mb-10 mb-5
 `}
 `;
 
 const CardContainer = styled.div`
   ${tw`
   flex
-  justify-between
+  flex-col lg:flex-row
+  lg:justify-between
   `}
 `;
 
@@ -35,10 +40,12 @@ ${tw`
 
 const CardTitle = styled.h3`
 ${tw`
-  text-xl
-  text-center
-  font-extrabold
-  mb-[25px]
+  lg:text-xl
+  text-sm
+  lg:text-center
+  text-left
+  lg:font-extrabold font-black
+  lg:mb-[25px] mb-2.5
 `}
 `;
 

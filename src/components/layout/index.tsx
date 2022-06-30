@@ -16,8 +16,15 @@ const PageContainer = styled.div`
     flex-col
     text-primary
     items-center
-    overflow-x-hidden
+    w-full
   `}
+`;
+
+const Mains = styled.main`
+${tw`
+  w-full
+  overflow-x-hidden
+`}
 `;
 
 export default function Layout({
@@ -25,13 +32,11 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <PageContainer>
-      <Wrapper>
-        <Header />
-      </Wrapper>
+      <Header />
       <Navbar />
-        <main>
-          {children}
-        </main>
+      <Mains>
+        {children}
+      </Mains>
       <Footer />
     </PageContainer>
   );

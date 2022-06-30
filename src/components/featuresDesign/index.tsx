@@ -14,7 +14,8 @@ import  Furniture  from "../../assets/icons/furniture.svg";
 
 const Container = styled.section`
 ${tw`
-    text-center
+    lg:text-center
+    text-left
     mb-10
     w-screen
 `};
@@ -22,15 +23,16 @@ ${tw`
 
 const Title = styled.h2`
 ${tw`
-    text-[40px]
+    lg:text-[40px] lg:leading-[38px]
     font-extrabold
+    text-xl
     mb-10
 `}
 `;
 
 const ListContainer = styled.div`
 ${tw`
-    flex
+    flex lg:flex-row flex-col
     mb-8
 `}
 `;
@@ -42,30 +44,46 @@ ${tw`
     text-[260px]
     font-extrabold
     leading-[180px]
+    display[none] lg:block
+`}
+`;
+
+const TextListMob = styled.span`
+${tw`
+    block
+    lg:display[none]
+    text-base
+    mb-4
 `}
 `;
 
 const List = styled.ul`
 ${tw`
     flex
-    items-start
+    lg:items-start
+    flex-wrap
 `}
 `;
 
 const Item = styled.li`
 ${tw`
-    w-[200px]
+    lg:w-[200px]
+    w-full
     flex
-    flex-col
+    lg:flex-col
     items-center
-    m-[15px]
+    xl:m-[15px]
+    mb-[10px]
+    svg:w-[41px] svg:h-[35px] lg:svg:w-[initial] lg:svg:h-[initial]
 `}
 `;
 
 const Descr = styled.span`
 ${tw`
-    pt-4
-    text-xl
+    lg:pt-4
+    ml-[10px] lg:ml-[initial]
+    lg:text-xl
+    text-xs
     text-black
     font-light
 `}
@@ -78,6 +96,7 @@ export const FeaturesDesign: React.FC = () => {
                 <Title>Дизайн-проект в два этапа</Title>
                 <ListContainer>
                     <TextList>1</TextList>
+                    <TextListMob>Первый этап</TextListMob>
                     <List>
                         <Item><Measure /><Descr>Замеры<br /> помещения</Descr></Item>
                         <Item><Plan /><Descr>Планировочное решение</Descr></Item>
@@ -87,6 +106,7 @@ export const FeaturesDesign: React.FC = () => {
                 </ListContainer>
                 <ListContainer>
                     <TextList>2</TextList>
+                    <TextListMob>Второй этап</TextListMob>
                     <List>
                         <Item><Installation /><Descr>Планы монтажа перегородок, дверных проемов</Descr></Item>
                         <Item><Jack /><Descr>План сантехники, розеток и выключателей, освещение</Descr></Item>

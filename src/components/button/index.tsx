@@ -78,6 +78,16 @@ const ButtonForPrice = styled(Link)`
 `}
 `;
 
+const ButtonForNavigate = styled(Link)`
+${tw`
+  text-accent
+  text-xs
+  lg:text-sm
+  underline 
+  hover:no-underline
+`}
+`;
+
 export const Button: React.FC<{
   children?: React.ReactNode;
   className?: string;
@@ -104,6 +114,9 @@ export const Button: React.FC<{
   }
   if (theme === "price") {
     return <ButtonForPrice onMouseOut={onMouseOut} onMouseOver={onMouseOver} className={className} to={to}>{children}</ButtonForPrice>;
+  }
+  if (theme === "navigate") {
+    return <ButtonForNavigate className={className} to={to}>{children}</ButtonForNavigate>;
   }
   return <ButtonForPhone className={className} href={href}>{children}</ButtonForPhone>;
 };

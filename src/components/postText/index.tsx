@@ -21,7 +21,8 @@ const Title = styled.h3`
 ${tw`
     mb-4
     font-black
-    text-xl
+    lg:text-xl
+    text-lg
 `}
 `;
 

@@ -23,7 +23,7 @@ ${tw`
     lg:text-[40px]
     text-xl
     font-extrabold
-    mb-10
+    lg:mb-10 mb-5
 `}
 `;
 

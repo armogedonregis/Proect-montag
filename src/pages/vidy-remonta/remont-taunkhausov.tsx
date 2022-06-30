@@ -17,7 +17,7 @@ export default function TownRemont({ data }) {
 
   return (
     <Layout>
-      <HeroApart color={true} bg={"bgtown"} mb={"mb-[120px]"} {...HeroProps} />
+      <HeroApart color={true} bg={"bgtown"} mb={"mb-5 lg:mb-[120px]"} {...HeroProps} />
       <TextTown />
       <Technology />
       <Material />
